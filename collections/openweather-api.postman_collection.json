@@ -1,0 +1,220 @@
+{
+  "info": {
+    "_postman_id": "8c22c723-66ec-4e8d-8788-44ef83e6ee11",
+    "name": "Open Weather MAP API - Chaining & Dynamic Variables",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53233168"
+  },
+  "item": [
+    {
+      "name": "Get - Geocode city to coordinates",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"200 OK\", () => pm.response.to.have.status(200));\nlet res = pm.response.json();\npm.test(\"response time is below 3000\",()=>{\npm.expect(pm.response.responseTime).to.be.below(3000);});\n\npm.test(\"city is found (array is not empty)\",()=>{\npm.expect(res).to.be.an(\"array\");\npm.expect(res.length).to.be.above(0)});\n\nif (res.length>0) {\npm.test(\"Result has lat, lon and name\",()=>{\npm.expect(res[0]).to.have.property(\"lat\");\npm.expect(res[0]).to.have.property(\"lon\");\npm.expect(res[0]).to.have.property(\"name\"); })\n\npm.test(\"latitude and longitude are valid numbers in range\",()=>{\npm.expect(res[0].lat).to.be.a(\"number\");\npm.expect(res[0].lon).to.be.a(\"number\");\npm.expect(res[0].lat).to.be.at.least(-90).and.at.most(90);\npm.expect(res[0].lon).to.be.at.least(-180).and.at.most(180);}); \n\npm.collectionVariables.set(\"lat\", res[0].lat);\npm.collectionVariables.set(\"lon\", res[0].lon);\npm.collectionVariables.set(\"city\", res[0].name);\npm.collectionVariables.set(\"resolved_city\", res[0].name); \n} else {\nconsole.warn(\"City not found - keeping previous lat/lon\");\n}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/geo/1.0/direct?q={{city}}&limit=1&appid={{api_key}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "geo",
+            "1.0",
+            "direct"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "{{city}}"
+            },
+            {
+              "key": "limit",
+              "value": "1"
+            },
+            {
+              "key": "appid",
+              "value": "{{api_key}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get - Current Weather by Coordinates",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\npm.response.to.have.status(200); })\n\npm.test(\"Content-Type is application/JSON\",()=>{\npm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");});\n\nlet res= pm.response.json();\n\npm.test(\"Response has required top-level fields\",()=>{\npm.expect(res).to.have.property(\"main\").and.to.be.an(\"object\").and.not.empty;\npm.expect(res).to.have.property(\"weather\");\npm.expect(res).to.have.property(\"name\");\npm.expect(res).to.have.property(\"coord\"); });\n\npm.test(\"Temperature is a number\",()=>{\npm.expect(res.main.temp).to.be.a(\"number\"); });\n\npm.test(\"Weather array is not empty\",()=>{\npm.expect(res.weather).to.be.an(\"array\");\npm.expect(res.weather.length).to.be.above(0); })\n\npm.test(\"humidity is within valid range(0-100)\",()=>{\npm.expect(res.main.humidity).to.be.at.least(0).and.at.most(100); });\n\npm.test(\"Returned city matches resolved city from geocoding step\",()=>{\npm.expect(res.name.toLowerCase()).to.eql(pm.collectionVariables.get(\"resolved_city\").toLowerCase()) })"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/data/2.5/weather?lat={{lat}}&lon={{lon}}&appid={{api_key}}&units=metric",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "data",
+            "2.5",
+            "weather"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lon",
+              "value": "{{lon}}"
+            },
+            {
+              "key": "appid",
+              "value": "{{api_key}}"
+            },
+            {
+              "key": "units",
+              "value": "metric"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get - 5 Day / 3 hours Forecast",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n pm.response.to.have.status(200);\n});\n\nlet res = pm.response.json();\n\npm.test(\"Response has a list array with entries\", function () {\n pm.expect(res).to.have.property(\"list\");\n pm.expect(res.list).to.be.an(\"array\");\n pm.expect(res.list.length).to.be.above(0);\n});\n\npm.test(\"Every forecast entry has valid data\", () => {\n res.list.forEach((entry, index) => { \n pm.expect(entry.main.temp, `entry ${index}: temp`).to.be.a(\"number\");\n pm.expect(entry.main.humidity, `entry ${index}: humidity`).to.be.at.least(0).and.at.most(100);\n pm.expect(entry.weather, `entry ${index}: weather`).to.be.an(\"array\");\n pm.expect(entry.weather.length, `entry ${index}: weather length`).to.be.above(0);\n pm.expect(entry.dt, `entry ${index}: timestamp`).to.be.a(\"number\");\n });\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/data/2.5/forecast?lat={{lat}}&lon={{lon}}&units=metric&appid={{api_key}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "data",
+            "2.5",
+            "forecast"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lon",
+              "value": "{{lon}}"
+            },
+            {
+              "key": "units",
+              "value": "metric"
+            },
+            {
+              "key": "appid",
+              "value": "{{api_key}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get - 5 Day Air Pollution / AQI Data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\npm.response.to.have.status(200);\n});\n\nlet res = pm.response.json();\n\npm.test(\"response has list array\",()=>{\npm.expect(res).to.have.property(\"list\");\npm.expect(res.list).to.be.an(\"array\"); })\n\npm.test(\"Every AQI is a valid category (1-5)\",()=>{\nres.list.forEach((category, index)=>{\npm.expect(category.main.aqi, `category ${index}: aqi`).to.be.oneOf([1,2,3,4,5]); }) });\n\npm.test(\"Pollutant components are all non-negative numbers\", () => {\n res.list.forEach((entry) => {\n let components = entry.components;\n Object.values(components).forEach((val) => {\n pm.expect(val).to.be.a(\"number\").and.to.be.at.least(0); \n });\n });\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/data/2.5/air_pollution?lat={{lat}}&lon={{lon}}&appid={{api_key}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "data",
+            "2.5",
+            "air_pollution"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lon",
+              "value": "{{lon}}"
+            },
+            {
+              "key": "appid",
+              "value": "{{api_key}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.openweathermap.org"
+    },
+    {
+      "key": "api_key",
+      "value": "YOUR_API_KEY_HERE"
+    },
+    {
+      "key": "city",
+      "value": "Ankara"
+    },
+    {
+      "key": "lat",
+      "value": "39.9334"
+    },
+    {
+      "key": "lon",
+      "value": "32.8597"
+    },
+    {
+      "key": "resolved_city",
+      "value": "Ankara"
+    }
+  ]
+}
