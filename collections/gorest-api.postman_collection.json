@@ -1,0 +1,315 @@
+{
+  "info": {
+    "_postman_id": "cc7e323d-42ed-4090-9d0a-434db07b5c78",
+    "name": "GoRest API - CRUD & Chaining",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53233168"
+  },
+  "item": [
+    {
+      "name": "Create user",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var username = \"user\" + Math.floor(Math.random() * 10000);\nvar useremail = \"test\" + Date.now() + \"@example.com\";\n\npm.collectionVariables.set(\"user_email\", useremail);\npm.collectionVariables.set(\"user_name\", username);"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status Code is 201\", () => {\n    pm.response.to.have.status(201);\n});\npm.test(\"Response time is below 3000ms\", () => {\n    pm.expect(pm.response.responseTime).to.be.below(3000);\n});\nlet data = pm.response.json();\npm.test(\"Content-Type is JSON\", () => {\n    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\n});\npm.test(\"Schema is valid\", () => {\n    pm.expect(data).to.have.property(\"id\");\n    pm.expect(data.id).to.be.a(\"number\");\n    pm.expect(data.email).to.include(\"@\");\n    pm.expect(data.status).to.be.oneOf([\"active\", \"inactive\"]);\n});\npm.collectionVariables.set(\"user_id\", data.id);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"{{user_name}}\",\n  \"email\":\"{{user_email}}\",\n  \"gender\": \"male\",\n  \"status\": \"active\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/users",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get user by id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "let data = pm.response.json();\npm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\npm.test(\"Returned user ID matches saved user_id\", function () {\n    pm.expect(data.id).to.eql(pm.collectionVariables.get(\"user_id\"));\n});\npm.test(\"User details match\", function () {\n    pm.expect(data.name).to.eql(pm.collectionVariables.get(\"user_name\"));\n    pm.expect(data.email).to.eql(pm.collectionVariables.get(\"user_email\"));\n});"
+            ]
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/users/{{user_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "users",
+            "{{user_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update user",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status Code is 200\", () => {\n    pm.response.to.have.status(200);\n});\npm.test(\"Response time is below 3000ms\", () => {\n    pm.expect(pm.response.responseTime).to.be.below(3000);\n});\nconst data = pm.response.json();\npm.test(\"Updated user fields match\", () => {\n    pm.expect(data.id).to.eql(pm.collectionVariables.get(\"user_id\"));\n    pm.expect(data.name).to.eql(pm.collectionVariables.get(\"user_name\"));\n    pm.expect(data.email).to.eql(pm.collectionVariables.get(\"user_email\"));\n    pm.expect(data.gender).to.eql(\"female\");\n    pm.expect(data.status).to.eql(\"inactive\");\n});"
+            ]
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var username = \"user\" + Math.floor(Math.random() * 10000);\nvar useremail = \"test\" + Date.now() + \"@example.com\";\npm.collectionVariables.set(\"user_email\", useremail);\npm.collectionVariables.set(\"user_name\", username);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"{{user_name}}\",\n  \"email\": \"{{user_email}}\",\n  \"gender\": \"female\",\n  \"status\": \"inactive\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/users/{{user_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "users",
+            "{{user_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete user",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status Code is 204\", () => {\n    pm.response.to.have.status(204);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/users/{{user_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "users",
+            "{{user_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get user by id after delete",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"User should be deleted - 404\", () => {\n    pm.response.to.have.status(404);\n});"
+            ]
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/users/{{user_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "users",
+            "{{user_id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://gorest.co.in/public/v2"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "user_email",
+      "value": ""
+    },
+    {
+      "key": "user_name",
+      "value": ""
+    },
+    {
+      "key": "user_id",
+      "value": ""
+    }
+  ]
+}
