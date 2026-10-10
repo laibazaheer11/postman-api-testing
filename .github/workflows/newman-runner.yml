@@ -1,0 +1,35 @@
+name: QA API Regression Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  test-execution:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone Code Repository
+        uses: actions/checkout@v4
+
+      - name: Initialize Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Newman CLI tool
+        run: npm install -g newman
+
+      - name: Run GoRest API Collection
+        run: |
+          newman run "collections/gorest-api.postman_collection.json" \
+          --env-var "token=${{ secrets.GOREST_TOKEN }}"
+
+      - name: Run OpenWeather API Collection
+        run: |
+          newman run "collections/openweather-api.postman_collection.json" \
+          --env-var "api_key=${{ secrets.WEATHER_API_KEY }}"
+
+      - name: Run Simple Books API Collection
+        run: newman run "collections/simple-books-api.postman_collection.json"
