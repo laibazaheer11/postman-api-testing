@@ -1,8 +1,8 @@
 # Postman API Automation Testing Portfolio
 
-[![Automated Regression Test Run](https://github.com)](https://github.com)
-[![Postman](https://shields.io)](https://postman.com)
-[![Newman CLI](https://shields.io)](https://postman.com)
+![Automated Regression Test Run](https://github.com) ![Postman](https://shields.io) ![Newman CLI](https://shields.io)
+
+
 
 This repository contains my portfolio of automated API test suites. It demonstrates end-to-end integration testing, data chaining between endpoints, and automatic schema validation. 
 
