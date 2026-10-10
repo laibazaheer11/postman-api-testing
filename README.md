@@ -4,6 +4,7 @@
 
 
 
+
 This repository contains my portfolio of automated API test suites. It demonstrates end-to-end integration testing, data chaining between endpoints, and automatic schema validation. 
 
 To simulate a real-world QA workflow, all tests are automated to run in the cloud using GitHub Actions and the Newman command-line runner whenever changes are made.
