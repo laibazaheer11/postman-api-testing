@@ -232,7 +232,7 @@
               "",
               "let getOrderData = pm.response.json();",
               "",
-              "pm.test(\"Order Id matches saved order id\", () =>{\",",
+              "pm.test(\"Order Id matches saved order id\", () =>{",
               "  pm.expect(getOrderData.id).to.eql(pm.collectionVariables.get(\"order_id\"));",
               "});"
             ]
