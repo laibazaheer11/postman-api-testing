@@ -8,17 +8,17 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
 
-This repository contains my portfolio of automated API test suites. It demonstrates end-to-end integration testing, data chaining between endpoints, and automatic schema validation. 
+ This Repository contains my portfolio of automated API test suites. It demonstrates end-to-end integration testing, data chaining between endpoints, and automatic schema validation. 
 
 To simulate a real-world QA workflow, all tests are automated to run in the cloud using GitHub Actions and the Newman command-line runner whenever changes are made.
 
 ---
 
 ## 🛠️ Tools & Technologies Used
-* **Testing Tool:** Postman (Web Browser Edition)
-* **Runner Tool:** Newman CLI (Used to run Postman collections via text commands)
-* **Automation Platform:** GitHub Actions (Cloud server environment running on `ubuntu-latest`)
-* **Assertion Scripting:** JavaScript (Using Postman's built-in Chai assertion library)
+* **Testing Tool:** Postman
+* **Runner Tool:** Newman CLI 
+* **Automation Platform:** GitHub Actions
+* **Assertion Scripting:** JavaScript + Chai
 
 ---
 
