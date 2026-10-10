@@ -1,8 +1,8 @@
 {
   "info": {
     "_postman_id": "0399f36b-c3c5-4df1-a378-1b27c8d345c2",
-    "name": "Simple Books API - E2E Order Flow",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "name": "Simple Books API - E2E Ordee Flow",
+    "schema": "https://getpostman.com",
     "_exporter_id": "53233168"
   },
   "item": [
@@ -14,7 +14,14 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 200\", function () {\n  pm.response.to.have.status(200);\n});\n\nlet data = pm.response.json();\npm.test(\"API status is OK\", () =>{\npm.expect(data.status).to.eql(\"OK\");});"
+              "pm.test(\"Status code is 200\", function () {",
+              "  pm.response.to.have.status(200);",
+              "});",
+              "",
+              "let statusData = pm.response.json();",
+              "pm.test(\"API status is OK\", () =>{",
+              "  pm.expect(statusData.status).to.eql(\"OK\");",
+              "});"
             ]
           }
         }
@@ -45,7 +52,10 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "var clientName = \"tester\" + Math.floor(Math.random()*100000);\nvar clientEmail = \"test\" + Date.now() + \"@example.com\";\npm.collectionVariables.set(\"client_name\", clientName);\npm.collectionVariables.set(\"client_email\", clientEmail);"
+              "var clientName = \"tester\" + Math.floor(Math.random()*100000);",
+              "var clientEmail = \"test\" + Date.now() + \"@example.com\";",
+              "pm.collectionVariables.set(\"client_name\", clientName);",
+              "pm.collectionVariables.set(\"client_email\", clientEmail);"
             ]
           }
         },
@@ -54,7 +64,18 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 201\", function () {\n  pm.response.to.have.status(201);\n});\n\nlet data = pm.response.json();\n\npm.test(\"Response has accessToken\",()=>{\npm.expect(data).to.have.property(\"accessToken\");\npm.expect(data.accessToken).to.be.a(\"string\").and.not.empty;\n});\n\npm.collectionVariables.set(\"access_token\", data.accessToken);\n\n"
+              "pm.test(\"Status code is 201\", function () {",
+              "  pm.response.to.have.status(201);",
+              "});",
+              "",
+              "let clientData = pm.response.json();",
+              "",
+              "pm.test(\"Response has accessToken\",()=>{",
+              "  pm.expect(clientData).to.have.property(\"accessToken\");",
+              "  pm.expect(clientData.accessToken).to.be.a(\"string\").and.not.empty;",
+              "});",
+              "",
+              "pm.collectionVariables.set(\"access_token\", clientData.accessToken);"
             ]
           }
         }
@@ -64,7 +85,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "   \n{ \n\n\"clientName\":\"{{client_name}}\",\n  \"clientEmail\":\"{{client_email}}\"\n\n}",
+          "raw": "{\n\"clientName\":\"{{client_name}}\",\n  \"clientEmail\":\"{{client_email}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -91,7 +112,21 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 200\", function () {\n  pm.response.to.have.status(200);\n});\n\nlet data = pm.response.json();\npm.test(\"Response is a non-empty array\", function () {\npm.expect(data).to.be.an(\"array\").and.not.empty; });\n\nlet availableBook= data.find( book => book.available === true)\npm.test(\"At least one available book exists\",()=>{\npm.expect(availableBook).to.not.be.undefined});\n\npm.collectionVariables.set(\"book_id\", availableBook.id);\n\n\n"
+              "pm.test(\"Status code is 200\", function () {",
+              "  pm.response.to.have.status(200);",
+              "});",
+              "",
+              "let booksData = pm.response.json();",
+              "pm.test(\"Response is a non-empty array\", function () {",
+              "  pm.expect(booksData).to.be.an(\"array\").and.not.empty; ",
+              "});",
+              "",
+              "let availableBook = booksData.find( book => book.available === true);",
+              "pm.test(\"At least one available book exists\",()=>{",
+              "  pm.expect(availableBook).to.not.be.undefined;",
+              "});",
+              "",
+              "pm.collectionVariables.set(\"book_id\", availableBook.id);"
             ]
           }
         }
@@ -129,7 +164,17 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 201\", function () {\n  pm.response.to.have.status(201);\n});\n\nlet data = pm.response.json();\n\npm.test(\"Response has order Id\",()=>{\npm.expect(data).to.have.property(\"orderId\");});\n\npm.collectionVariables.set(\"order_id\", data.orderId);\n"
+              "pm.test(\"Status code is 201\", function () {",
+              "  pm.response.to.have.status(201);",
+              "});",
+              "",
+              "let orderData = pm.response.json();",
+              "",
+              "pm.test(\"Response has order Id\",()=>{",
+              "  pm.expect(orderData).to.have.property(\"orderId\");",
+              "});",
+              "",
+              "pm.collectionVariables.set(\"order_id\", orderData.orderId);"
             ]
           }
         }
@@ -181,7 +226,15 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 200\", function () {\n  pm.response.to.have.status(200);\n});\n\nlet data = pm.response.json();\n\npm.test(\"Order Id matches saved order id\", () =>{\npm.expect(data.id).to.eql(pm.collectionVariables.get(\"order_id\"));});"
+              "pm.test(\"Status code is 200\", function () {",
+              "  pm.response.to.have.status(200);",
+              "});",
+              "",
+              "let getOrderData = pm.response.json();",
+              "",
+              "pm.test(\"Order Id matches saved order id\", () =>{\",",
+              "  pm.expect(getOrderData.id).to.eql(pm.collectionVariables.get(\"order_id\"));",
+              "});"
             ]
           }
         }
@@ -220,7 +273,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.collectionVariables.set(\"updated_name\", \"Updated_\" + pm.collectionVariables.get(\"client_name\"));\n"
+              "pm.collectionVariables.set(\"updated_name\", \"Updated_\" + pm.collectionVariables.get(\"client_name\"));"
             ]
           }
         },
@@ -229,7 +282,9 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 204\", function () {\n  pm.response.to.have.status(204);\n});\n"
+              "pm.test(\"Status code is 204\", function () {",
+              "  pm.response.to.have.status(204);",
+              "});"
             ]
           }
         }
@@ -249,7 +304,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "\n{\n  \"customerName\": \"{{updated_name}}\"\n}",
+          "raw": "{\n  \"customerName\": \"{{updated_name}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -277,7 +332,11 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "let data = pm.response.json();\n\npm.test(\"Customer name updated correctly\",()=>{\npm.expect(data.customerName).to.eql(pm.collectionVariables.get(\"updated_name\"));});"
+              "let verifyUpdateData = pm.response.json();",
+              "",
+              "pm.test(\"Customer name updated correctly\",()=>{",
+              "  pm.expect(verifyUpdateData.customerName).to.eql(pm.collectionVariables.get(\"updated_name\"));",
+              "});"
             ]
           }
         }
@@ -308,7 +367,7 @@
       },
       "response": []
     },
-    {
+       {
       "name": "Delete Order",
       "event": [
         {
@@ -316,7 +375,9 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 204\", function () {\n  pm.response.to.have.status(204);\n});\n"
+              "pm.test(\"Status code is 204\", function () {",
+              "  pm.response.to.have.status(204);",
+              "});"
             ]
           }
         }
@@ -364,7 +425,16 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Deleted Order Returns 404\", function () {\n  pm.response.to.have.status(404);\n});\n\npm.collectionVariables.unset(\"order_id\");\npm.collectionVariables.unset(\"book_id\")\npm.collectionVariables.unset(\"access_token\");\npm.collectionVariables.unset(\"client_name\");\npm.collectionVariables.unset(\"client_email\");\npm.collectionVariables.unset(\"updated_name\");\n\n;"
+              "pm.test(\"Deleted Order Returns 404\", function () {",
+              "  pm.response.to.have.status(404);",
+              "});",
+              "",
+              "pm.collectionVariables.unset(\"order_id\");",
+              "pm.collectionVariables.unset(\"book_id\");",
+              "pm.collectionVariables.unset(\"access_token\");",
+              "pm.collectionVariables.unset(\"client_name\");",
+              "pm.collectionVariables.unset(\"client_email\");",
+              "pm.collectionVariables.unset(\"updated_name\");"
             ]
           }
         }
