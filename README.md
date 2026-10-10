@@ -8,6 +8,7 @@
 [JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 [API Testing](https://img.shields.io/badge/API_Testing-00C7B7?style=flat-square&logo=postman&logoColor=white)
 
+
 This repository contains my portfolio of automated API test suites. It demonstrates end-to-end integration testing, data chaining between endpoints, and automatic schema validation. 
 
 To simulate a real-world QA workflow, all tests are automated to run in the cloud using GitHub Actions and the Newman command-line runner whenever changes are made.
