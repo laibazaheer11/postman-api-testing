@@ -1,7 +1,10 @@
 # Postman API Automation Testing Portfolio
 
-![Automated Regression Test Run](https://github.com)
-
+[![Automated Regression Test Run](https://github.com/laibazaheer11/postman-api-testing/actions/workflows/newman-runner.yml/badge.svg)](https://github.com/laibazaheer11/postman-api-testing/actions/workflows/newman-runner.yml)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Newman CLI](https://img.shields.io/badge/Newman_CLI-000000?style=for-the-badge&logo=npm&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 
 
