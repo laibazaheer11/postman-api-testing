@@ -19,17 +19,25 @@ jobs:
           node-version: '22'
 
       - name: Install Newman CLI tool
-        run: npm install -g newman
+        run: npm install -g newman newman-reporter-htmlextra
 
       - name: Run GoRest API Collection
         run: |
           newman run "collections/gorest-api.postman_collection.json" \
-          --env-var "token=${{ secrets.GOREST_TOKEN }}"
+          --env-var "token=${{ secrets.GOREST_TOKEN }}" \
+          -r htmlextra --reporter-htmlextra-export newman/gorest-report.html
 
       - name: Run OpenWeather API Collection
         run: |
           newman run "collections/openweather-api.postman_collection.json" \
-          --env-var "api_key=${{ secrets.WEATHER_API_KEY }}"
+          --env-var "api_key=${{ secrets.WEATHER_API_KEY }}" \
+          -r htmlextra --reporter-htmlextra-export newman/weather-report.html
 
       - name: Run Simple Books API Collection
-        run: newman run "collections/simple-books-api.postman_collection.json"
+        run: newman run "collections/simple-books-api.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/books-report.html
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: newman-report
+          path: newman/
