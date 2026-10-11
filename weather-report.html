@@ -472,7 +472,7 @@ body.theme-light code {
                 <a class="nav-link text-white" id="pills-requests-tab" data-toggle="pill" href="#pills-requests" role="tab" aria-controls="pills-requests" aria-selected="false">Total Requests <span class="badge badge-light">4</span></a>
             </li>
             <li class="nav-item bg-danger" data-toggle="tooltip" title="Click to view the Failed Tests">
-                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">15</span></a>
+                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">0</span></a>
             </li>
             <li class="nav-item bg-warning" data-toggle="tooltip" title="Click to view the Skipped Tests">
                 <a class="nav-link text-white" id="pills-skipped-tab" data-toggle="pill" href="#pills-skipped" role="tab" aria-controls="pills-skipped" aria-selected="false">Skipped Tests <span class="badge badge-light">0</span></a>
@@ -483,11 +483,11 @@ body.theme-light code {
 <div class="row">
   <div class="col-md-9 col-lg-12 main">
    <h1 class="display-2 text-center">Newman Run Dashboard</h1>
-   <h5 class="text-center">Sunday, 11 October 2026 17:06:42</h5>
+   <h5 class="text-center">Sunday, 11 October 2026 17:26:59</h5>
    <div class="row">
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-success">
-      <div class="card-body bg-danger">
+      <div class="card-body bg-success">
        <div class="rotate">
         <i class="fa fa-retweet fa-5x"></i>
        </div>
@@ -503,18 +503,18 @@ body.theme-light code {
         <i class="fa fa-list fa-4x"></i>
        </div>
        <h6 class="text-uppercase">Total Assertions</h6>
-       <h1 class="display-1">17</h1>
+       <h1 class="display-1">19</h1>
       </div>
      </div>
     </div>
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-info">
-      <div class="card-body bg-danger">
+      <div class="card-body bg-success">
        <div class="rotate">
         <i class="fa fa-plus-circle fa-5x"></i>
        </div>
        <h6 class="text-uppercase">Total Failed Tests</h6>
-       <h1 class="display-1">15</h1>
+       <h1 class="display-1">0</h1>
       </div>
      </div>
     </div>
@@ -550,9 +550,9 @@ body.theme-light code {
             <div class="card border-info">
                 <div class="card-body">
                 <h5 class="card-title text-uppercase text-white text-center bg-info">Timings and Data</h5>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 282ms<br>
-                <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 432B<br>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 54ms<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 538ms<br>
+                <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 19.1KB<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 105ms<br>
                 </div>
             </div>
         </div>
@@ -584,10 +584,10 @@ body.theme-light code {
                         <td class="text-center">4</td>
                         <td class="text-center">0</td>
                     </tr>
-                    <tr class="table-danger">
+                    <tr class="">
                         <td>Assertions</td>
-                        <td class="text-center">17</td>
-                        <td class="text-center">15</td>
+                        <td class="text-center">19</td>
+                        <td class="text-center">0</td>
                     </tr>
                     <tr class="">
                         <td>Skipped Tests</td>
@@ -608,330 +608,9 @@ body.theme-light code {
             <div class="tab-pane fade" id="pills-failed" role="tabcard" aria-labelledby="pills-failed-tab">
                 <button id="topOfFailuresScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
-                    <div class="btn-group float-right" role="group" aria-label="Button Group">
-                        <button id="openAllFailed" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 185px;">Expand All Failed Tests</button>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="alert alert-danger text-uppercase text-center">
-                        <h4>Showing 15 Failures</h4>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-6ef0bf5d-15a3-40f2-b820-220cff0da28a" aria-expanded="false" aria-controls="collapse" id="fails-6ef0bf5d-15a3-40f2-b820-220cff0da28a" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - Geocode city to coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-6ef0bf5d-15a3-40f2-b820-220cff0da28a" class="collapse" aria-labelledby="fails-6ef0bf5d-15a3-40f2-b820-220cff0da28a">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> 200 OK</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected response to have status code 200 but got 401</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-3f7da3d5-832b-42a3-a25d-86893da00439" aria-expanded="false" aria-controls="collapse" id="fails-3f7da3d5-832b-42a3-a25d-86893da00439" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - Geocode city to coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-3f7da3d5-832b-42a3-a25d-86893da00439" class="collapse" aria-labelledby="fails-3f7da3d5-832b-42a3-a25d-86893da00439">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> city is found (array is not empty)</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected { cod: 401, …(1) } to be an array</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-230ebfff-e29b-428d-b065-750dc38990eb" aria-expanded="false" aria-controls="collapse" id="fails-230ebfff-e29b-428d-b065-750dc38990eb" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - Current Weather by Coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-230ebfff-e29b-428d-b065-750dc38990eb" class="collapse" aria-labelledby="fails-230ebfff-e29b-428d-b065-750dc38990eb">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Status code is 200</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected response to have status code 200 but got 401</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-dccf61d5-b497-4987-9a80-ab075c8df37e" aria-expanded="false" aria-controls="collapse" id="fails-dccf61d5-b497-4987-9a80-ab075c8df37e" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - Current Weather by Coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-dccf61d5-b497-4987-9a80-ab075c8df37e" class="collapse" aria-labelledby="fails-dccf61d5-b497-4987-9a80-ab075c8df37e">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Response has required top-level fields</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected { cod: 401, …(1) } to have property &#x27;main&#x27;</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-1e642940-9539-439c-94da-a4cd8d214cf1" aria-expanded="false" aria-controls="collapse" id="fails-1e642940-9539-439c-94da-a4cd8d214cf1" class="collapsed text-white z-block">
-                                    Iteration 1 - TypeError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - Current Weather by Coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-1e642940-9539-439c-94da-a4cd8d214cf1" class="collapse" aria-labelledby="fails-1e642940-9539-439c-94da-a4cd8d214cf1">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Temperature is a number</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >Cannot read properties of undefined (reading &#x27;temp&#x27;)</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-e845a6f5-4f40-4818-ab42-ef9bf8b62ad3" aria-expanded="false" aria-controls="collapse" id="fails-e845a6f5-4f40-4818-ab42-ef9bf8b62ad3" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - Current Weather by Coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-e845a6f5-4f40-4818-ab42-ef9bf8b62ad3" class="collapse" aria-labelledby="fails-e845a6f5-4f40-4818-ab42-ef9bf8b62ad3">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Weather array is not empty</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected undefined to be an array</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-a14ef3c7-e7da-4fa5-8434-44abe768640b" aria-expanded="false" aria-controls="collapse" id="fails-a14ef3c7-e7da-4fa5-8434-44abe768640b" class="collapsed text-white z-block">
-                                    Iteration 1 - TypeError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - Current Weather by Coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-a14ef3c7-e7da-4fa5-8434-44abe768640b" class="collapse" aria-labelledby="fails-a14ef3c7-e7da-4fa5-8434-44abe768640b">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> humidity is within valid range(0-100)</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >Cannot read properties of undefined (reading &#x27;humidity&#x27;)</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-c77e17c4-7d6b-4586-a958-fdbd251abbad" aria-expanded="false" aria-controls="collapse" id="fails-c77e17c4-7d6b-4586-a958-fdbd251abbad" class="collapsed text-white z-block">
-                                    Iteration 1 - TypeError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - Current Weather by Coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-c77e17c4-7d6b-4586-a958-fdbd251abbad" class="collapse" aria-labelledby="fails-c77e17c4-7d6b-4586-a958-fdbd251abbad">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Returned city matches resolved city from geocoding step</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >Cannot read properties of undefined (reading &#x27;toLowerCase&#x27;)</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-60fb95d8-1296-4965-b4fb-f94dd5aca405" aria-expanded="false" aria-controls="collapse" id="fails-60fb95d8-1296-4965-b4fb-f94dd5aca405" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - 5 Day / 3 hours Forecast <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-60fb95d8-1296-4965-b4fb-f94dd5aca405" class="collapse" aria-labelledby="fails-60fb95d8-1296-4965-b4fb-f94dd5aca405">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Status code is 200</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected response to have status code 200 but got 401</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-7a8f3627-a6cf-466d-9ae1-00f497807a6c" aria-expanded="false" aria-controls="collapse" id="fails-7a8f3627-a6cf-466d-9ae1-00f497807a6c" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - 5 Day / 3 hours Forecast <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-7a8f3627-a6cf-466d-9ae1-00f497807a6c" class="collapse" aria-labelledby="fails-7a8f3627-a6cf-466d-9ae1-00f497807a6c">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Response has a list array with entries</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected { cod: 401, …(1) } to have property &#x27;list&#x27;</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-b94aa059-3edd-4af2-9c33-1fdfbeaaa109" aria-expanded="false" aria-controls="collapse" id="fails-b94aa059-3edd-4af2-9c33-1fdfbeaaa109" class="collapsed text-white z-block">
-                                    Iteration 1 - TypeError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - 5 Day / 3 hours Forecast <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-b94aa059-3edd-4af2-9c33-1fdfbeaaa109" class="collapse" aria-labelledby="fails-b94aa059-3edd-4af2-9c33-1fdfbeaaa109">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Every forecast entry has valid data</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >Cannot read properties of undefined (reading &#x27;forEach&#x27;)</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-d6299d8b-ad3b-41bd-885e-b0980a938ef4" aria-expanded="false" aria-controls="collapse" id="fails-d6299d8b-ad3b-41bd-885e-b0980a938ef4" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - 5 Day Air Pollution / AQI Data <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-d6299d8b-ad3b-41bd-885e-b0980a938ef4" class="collapse" aria-labelledby="fails-d6299d8b-ad3b-41bd-885e-b0980a938ef4">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Status code is 200</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected response to have status code 200 but got 401</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-1c05b0a1-804f-4f61-94b6-57654ef7ffc4" aria-expanded="false" aria-controls="collapse" id="fails-1c05b0a1-804f-4f61-94b6-57654ef7ffc4" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - 5 Day Air Pollution / AQI Data <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-1c05b0a1-804f-4f61-94b6-57654ef7ffc4" class="collapse" aria-labelledby="fails-1c05b0a1-804f-4f61-94b6-57654ef7ffc4">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> response has list array</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected { cod: 401, …(1) } to have property &#x27;list&#x27;</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-ed2d0f96-9153-4fca-97da-497fc218bd72" aria-expanded="false" aria-controls="collapse" id="fails-ed2d0f96-9153-4fca-97da-497fc218bd72" class="collapsed text-white z-block">
-                                    Iteration 1 - TypeError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - 5 Day Air Pollution / AQI Data <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-ed2d0f96-9153-4fca-97da-497fc218bd72" class="collapse" aria-labelledby="fails-ed2d0f96-9153-4fca-97da-497fc218bd72">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Every AQI is a valid category (1-5)</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >Cannot read properties of undefined (reading &#x27;forEach&#x27;)</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-6b7d56ab-58fc-4ae3-892d-ab78682d25bc" aria-expanded="false" aria-controls="collapse" id="fails-6b7d56ab-58fc-4ae3-892d-ab78682d25bc" class="collapsed text-white z-block">
-                                    Iteration 1 - TypeError - Open Weather MAP API - Chaining &amp; Dynamic Variables - Get - 5 Day Air Pollution / AQI Data <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-6b7d56ab-58fc-4ae3-892d-ab78682d25bc" class="collapse" aria-labelledby="fails-6b7d56ab-58fc-4ae3-892d-ab78682d25bc">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Pollutant components are all non-negative numbers</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >Cannot read properties of undefined (reading &#x27;forEach&#x27;)</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                <div class="alert alert-success text-uppercase text-center">
+                     <br><br><h1 class="text-center">There are no failed tests <span><i class="far fa-thumbs-up"></i></span></h1><br><br>
+                </div>
             </div>
 
             <div class="tab-pane fade" id="pills-skipped" role="tabcard" aria-labelledby="pills-skipped-tab">
@@ -946,7 +625,6 @@ body.theme-light code {
             <button id="topOfRequestsScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
             <div class="btn-group float-right" role="group" aria-label="Button Group">
-                <button id="showOnlyFailures" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width:160px;">Show Failed Iterations</button>
                 <button id="openAll" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Folders</button>
                 <button id="openAllRequests" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Requests</button>
             </div>
@@ -961,16 +639,16 @@ body.theme-light code {
     </div>
     <h6 class="text-uppercase text-muted" id="iterationSelected" style="padding-top: 10px;"></h6>
 	<div class="tab-content" id="execution-data">
-            <div id="folder-efd818e3-f9b9-4383-9985-670f24023529" class="card-deck iteration-0">
+            <div id="folder-82798e27-221c-42d2-bc89-8e6f72c2e542" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-danger iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-efd818e3-f9b9-4383-9985-670f24023529" aria-expanded="false" aria-controls="collapse" id="requests-efd818e3-f9b9-4383-9985-670f24023529" class="collapsed text-white z-block">
+                    <div class="card-header  bg-success iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-82798e27-221c-42d2-bc89-8e6f72c2e542" aria-expanded="false" aria-controls="collapse" id="requests-82798e27-221c-42d2-bc89-8e6f72c2e542" class="collapsed text-white z-block">
                     Iteration: 1 - Get - Geocode city to coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-efd818e3-f9b9-4383-9985-670f24023529" class="collapse" aria-labelledby="requests-efd818e3-f9b9-4383-9985-670f24023529">
+                    <div id="collapse-82798e27-221c-42d2-bc89-8e6f72c2e542" class="collapse" aria-labelledby="requests-82798e27-221c-42d2-bc89-8e6f72c2e542">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -979,21 +657,21 @@ body.theme-light code {
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Request Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Request Method:</strong> <span class="badge-outline-success badge badge-success"> GET</span><br>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://api.openweathermap.org/geo/1.0/direct?q&#x3D;Ankara&amp;limit&#x3D;1&amp;appid&#x3D;YOUR_API_KEY_HERE" target="_blank">https://api.openweathermap.org/geo/1.0/direct?q&#x3D;Ankara&amp;limit&#x3D;1&amp;appid&#x3D;YOUR_API_KEY_HERE</a><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://api.openweathermap.org/geo/1.0/direct?q&#x3D;Ankara&amp;limit&#x3D;1&amp;appid&#x3D;983ca0e677744057900d2e7afe86a92d" target="_blank">https://api.openweathermap.org/geo/1.0/direct?q&#x3D;Ankara&amp;limit&#x3D;1&amp;appid&#x3D;983ca0e677744057900d2e7afe86a92d</a><br>
                                     </div>
                                 </div>
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 401 - Unauthorized</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 123ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 108B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 157ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 1.95KB</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>33 %</strong></h5>
+                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1026,7 +704,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">f47a652b-9c0e-4e33-886b-344a5d7e5016</td>
+                                                        <td class="text-wrap">a53557c8-d07d-40ce-8606-44d9b56cbfe1</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1060,7 +738,7 @@ body.theme-light code {
                                             <tbody>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Sun, 11 Oct 2026 17:06:42 GMT</td>
+                                                    <td class="text-wrap">Sun, 11 Oct 2026 17:26:58 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
@@ -1068,7 +746,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">108</td>
+                                                    <td class="text-wrap">1996</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
@@ -1105,10 +783,10 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-6e38f79c-2ec9-4c6e-8c37-2c6653501457" class="prettyPrint">{&quot;cod&quot;:401, &quot;message&quot;: &quot;Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.&quot;}</code></pre>
+                                                <pre><code id="copyText-089c7bf7-e59a-4e40-901c-eb72191dee8b" class="prettyPrint">[{&quot;name&quot;:&quot;Ankara&quot;,&quot;local_names&quot;:{&quot;se&quot;:&quot;Ankara&quot;,&quot;ce&quot;:&quot;Анкара&quot;,&quot;eu&quot;:&quot;Ankara&quot;,&quot;as&quot;:&quot;আনকাৰা&quot;,&quot;gn&quot;:&quot;Ankára&quot;,&quot;sv&quot;:&quot;Ankara&quot;,&quot;nn&quot;:&quot;Ankara&quot;,&quot;en&quot;:&quot;Ankara&quot;,&quot;ps&quot;:&quot;انقره&quot;,&quot;fr&quot;:&quot;Ankara&quot;,&quot;ky&quot;:&quot;Анкара&quot;,&quot;mt&quot;:&quot;Ankara&quot;,&quot;nl&quot;:&quot;Ankara&quot;,&quot;uk&quot;:&quot;Анкара&quot;,&quot;sc&quot;:&quot;Ankara&quot;,&quot;km&quot;:&quot;អង់ការ៉ា&quot;,&quot;pl&quot;:&quot;Ankara&quot;,&quot;cy&quot;:&quot;Ankara&quot;,&quot;sh&quot;:&quot;Ankara&quot;,&quot;no&quot;:&quot;Ankara&quot;,&quot;la&quot;:&quot;Ancyra&quot;,&quot;el&quot;:&quot;Άγκυρα&quot;,&quot;mr&quot;:&quot;अंकारा&quot;,&quot;ro&quot;:&quot;Ankara&quot;,&quot;dv&quot;:&quot;އަންކާރާ އެވެ&quot;,&quot;te&quot;:&quot;అంకారా&quot;,&quot;es&quot;:&quot;Ankara&quot;,&quot;or&quot;:&quot;ଅଙ୍କାର&quot;,&quot;an&quot;:&quot;Ankara&quot;,&quot;de&quot;:&quot;Ankara&quot;,&quot;ku&quot;:&quot;Enqere&quot;,&quot;th&quot;:&quot;อังการา&quot;,&quot;ga&quot;:&quot;Ankara&quot;,&quot;sr&quot;:&quot;Анкара&quot;,&quot;ki&quot;:&quot;Ankara&quot;,&quot;cu&quot;:&quot;Анкѷра&quot;,&quot;av&quot;:&quot;Анкара&quot;,&quot;co&quot;:&quot;Ankara&quot;,&quot;pt&quot;:&quot;Ancara&quot;,&quot;da&quot;:&quot;Ankara&quot;,&quot;ae&quot;:&quot;𐬂𐬥𐬐𐬂𐬭𐬂&quot;,&quot;ur&quot;:&quot;انقرہ&quot;,&quot;os&quot;:&quot;Анкара&quot;,&quot;kn&quot;:&quot;ಅಂಕಾರಾ&quot;,&quot;hu&quot;:&quot;Ankara&quot;,&quot;li&quot;:&quot;Ankara&quot;,&quot;tg&quot;:&quot;Анкара&quot;,&quot;ti&quot;:&quot;ኣንካራ&quot;,&quot;kl&quot;:&quot;Ankara&quot;,&quot;mn&quot;:&quot;Анкара&quot;,&quot;mi&quot;:&quot;Anakara&quot;,&quot;fa&quot;:&quot;آنکارا&quot;,&quot;tr&quot;:&quot;Ankara&quot;,&quot;mk&quot;:&quot;Анкара&quot;,&quot;bg&quot;:&quot;Анкара&quot;,&quot;eo&quot;:&quot;Ankaro&quot;,&quot;br&quot;:&quot;Ankara&quot;,&quot;ty&quot;:&quot;Ankara&quot;,&quot;ka&quot;:&quot;ანკარა&quot;,&quot;is&quot;:&quot;Ankara&quot;,&quot;uz&quot;:&quot;Anqara&quot;,&quot;tt&quot;:&quot;Әнкара&quot;,&quot;sm&quot;:&quot;Ankara&quot;,&quot;be&quot;:&quot;Анкара&quot;,&quot;tl&quot;:&quot;Ankara&quot;,&quot;so&quot;:&quot;Ankara&quot;,&quot;zh&quot;:&quot;安卡拉&quot;,&quot;lb&quot;:&quot;Ankara&quot;,&quot;gd&quot;:&quot;Ankara&quot;,&quot;yi&quot;:&quot;אנקארא&quot;,&quot;ko&quot;:&quot;앙카라&quot;,&quot;hy&quot;:&quot;Անկարա&quot;,&quot;aa&quot;:&quot;Ankara&quot;,&quot;vi&quot;:&quot;Ankara&quot;,&quot;kw&quot;:&quot;Ankara&quot;,&quot;fy&quot;:&quot;Ankara&quot;,&quot;ab&quot;:&quot;Анкара&quot;,&quot;bo&quot;:&quot;ཨན་ཁ་ར།&quot;,&quot;kk&quot;:&quot;Анкара&quot;,&quot;ar&quot;:&quot;أنقرة&quot;,&quot;oc&quot;:&quot;Ankara&quot;,&quot;hr&quot;:&quot;Ankara&quot;,&quot;ug&quot;:&quot;ئەنقەرە&quot;,&quot;it&quot;:&quot;Ankara&quot;,&quot;he&quot;:&quot;אנקרה&quot;,&quot;ru&quot;:&quot;Анкара&quot;,&quot;ie&quot;:&quot;Ancara&quot;,&quot;sk&quot;:&quot;Ankara&quot;,&quot;am&quot;:&quot;አንካራ&quot;,&quot;hi&quot;:&quot;अंकारा&quot;,&quot;rm&quot;:&quot;Ankara&quot;,&quot;af&quot;:&quot;Ankara&quot;,&quot;bs&quot;:&quot;Ankara&quot;,&quot;wa&quot;:&quot;Ankara&quot;,&quot;ja&quot;:&quot;アンカラ&quot;,&quot;ne&quot;:&quot;अङ्कारा&quot;,&quot;lo&quot;:&quot;ອັງກາລາ&quot;,&quot;wo&quot;:&quot;Ankara&quot;,&quot;fo&quot;:&quot;Ankara&quot;,&quot;bn&quot;:&quot;আঙ্কারা&quot;,&quot;cs&quot;:&quot;Ankara&quot;,&quot;gl&quot;:&quot;Ancara&quot;,&quot;ta&quot;:&quot;அங்காரா&quot;,&quot;sl&quot;:&quot;Ankara&quot;,&quot;tk&quot;:&quot;Ankara&quot;,&quot;ml&quot;:&quot;അങ്കാറ&quot;},&quot;lat&quot;:39.9207759,&quot;lon&quot;:32.8540497,&quot;country&quot;:&quot;TR&quot;,&quot;state&quot;:&quot;Ankara&quot;}]</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-6e38f79c-2ec9-4c6e-8c37-2c6653501457">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-089c7bf7-e59a-4e40-901c-eb72191dee8b">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1125,8 +803,8 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >200 OK</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
@@ -1137,39 +815,43 @@ body.theme-light code {
                                                 </tr>
                                                 <tr >
                                                     <td >city is found (array is not empty)</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr>
+                                                <tr >
+                                                    <td >Result has lat, lon and name</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr>
+                                                <tr >
+                                                    <td >latitude and longitude are valid numbers in range</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
-                                                    <td class="text-center">2</td>
+                                                    <td class="text-center">5</td>
+                                                    <td class="text-center">0</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row ">
+                                    <div class="row d-none">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
                                             <div class="card-body">
-                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failures</h5>
+                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failure</h5>
                                                 <div class="table-responsive">
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">200 OK</td>
-                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 401</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">city is found (array is not empty)</td>
-                                                                <td class="w-55"><pre><code >expected { cod: 401, …(1) } to be an array</code></pre></td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1187,16 +869,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-1789654e-35a0-4128-89ac-a8682c09b147" class="card-deck iteration-0">
+            <div id="folder-6377a1e8-022c-44e8-a8c0-8a72b87a868b" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-danger iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-1789654e-35a0-4128-89ac-a8682c09b147" aria-expanded="false" aria-controls="collapse" id="requests-1789654e-35a0-4128-89ac-a8682c09b147" class="collapsed text-white z-block">
+                    <div class="card-header  bg-success iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b" aria-expanded="false" aria-controls="collapse" id="requests-6377a1e8-022c-44e8-a8c0-8a72b87a868b" class="collapsed text-white z-block">
                     Iteration: 1 - Get - Current Weather by Coordinates <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-1789654e-35a0-4128-89ac-a8682c09b147" class="collapse" aria-labelledby="requests-1789654e-35a0-4128-89ac-a8682c09b147">
+                    <div id="collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b" class="collapse" aria-labelledby="requests-6377a1e8-022c-44e8-a8c0-8a72b87a868b">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1205,21 +887,21 @@ body.theme-light code {
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Request Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Request Method:</strong> <span class="badge-outline-success badge badge-success"> GET</span><br>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://api.openweathermap.org/data/2.5/weather?lat&#x3D;39.9334&amp;lon&#x3D;32.8597&amp;appid&#x3D;YOUR_API_KEY_HERE&amp;units&#x3D;metric" target="_blank">https://api.openweathermap.org/data/2.5/weather?lat&#x3D;39.9334&amp;lon&#x3D;32.8597&amp;appid&#x3D;YOUR_API_KEY_HERE&amp;units&#x3D;metric</a><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://api.openweathermap.org/data/2.5/weather?lat&#x3D;39.9207759&amp;lon&#x3D;32.8540497&amp;appid&#x3D;983ca0e677744057900d2e7afe86a92d&amp;units&#x3D;metric" target="_blank">https://api.openweathermap.org/data/2.5/weather?lat&#x3D;39.9207759&amp;lon&#x3D;32.8540497&amp;appid&#x3D;983ca0e677744057900d2e7afe86a92d&amp;units&#x3D;metric</a><br>
                                     </div>
                                 </div>
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 401 - Unauthorized</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 31ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 108B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 26ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 509B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>14 %</strong></h5>
+                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1252,7 +934,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">cf83bf64-132f-4a83-b40e-0837a47b8b8e</td>
+                                                        <td class="text-wrap">12a3236c-82dd-451c-a238-e40756f970f0</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1286,7 +968,7 @@ body.theme-light code {
                                             <tbody>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Sun, 11 Oct 2026 17:06:42 GMT</td>
+                                                    <td class="text-wrap">Sun, 11 Oct 2026 17:26:59 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
@@ -1294,7 +976,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">108</td>
+                                                    <td class="text-wrap">509</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
@@ -1302,7 +984,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cache-Key</td>
-                                                    <td class="text-wrap">/data/2.5/weather?lat&#x3D;39.93&amp;lon&#x3D;32.86&amp;units&#x3D;metric</td>
+                                                    <td class="text-wrap">/data/2.5/weather?lat&#x3D;39.92&amp;lon&#x3D;32.85&amp;units&#x3D;metric</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Access-Control-Allow-Origin</td>
@@ -1331,10 +1013,10 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-0708bbc6-535f-490c-b3cc-d1c83acf3b31" class="prettyPrint">{&quot;cod&quot;:401, &quot;message&quot;: &quot;Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.&quot;}</code></pre>
+                                                <pre><code id="copyText-852142e8-899f-4bc8-89ec-02374f5a0f2f" class="prettyPrint">{&quot;coord&quot;:{&quot;lon&quot;:32.854,&quot;lat&quot;:39.9208},&quot;weather&quot;:[{&quot;id&quot;:800,&quot;main&quot;:&quot;Clear&quot;,&quot;description&quot;:&quot;clear sky&quot;,&quot;icon&quot;:&quot;01n&quot;}],&quot;base&quot;:&quot;stations&quot;,&quot;main&quot;:{&quot;temp&quot;:21.23,&quot;feels_like&quot;:20.45,&quot;temp_min&quot;:17.51,&quot;temp_max&quot;:21.23,&quot;pressure&quot;:1010,&quot;humidity&quot;:40,&quot;sea_level&quot;:1010,&quot;grnd_level&quot;:900},&quot;visibility&quot;:10000,&quot;wind&quot;:{&quot;speed&quot;:1.63,&quot;deg&quot;:96,&quot;gust&quot;:3.44},&quot;clouds&quot;:{&quot;all&quot;:4},&quot;dt&quot;:1791739619,&quot;sys&quot;:{&quot;type&quot;:2,&quot;id&quot;:267643,&quot;country&quot;:&quot;TR&quot;,&quot;sunrise&quot;:1791690857,&quot;sunset&quot;:1791731771},&quot;timezone&quot;:10800,&quot;id&quot;:323786,&quot;name&quot;:&quot;Ankara&quot;,&quot;cod&quot;:200}</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-0708bbc6-535f-490c-b3cc-d1c83acf3b31">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-852142e8-899f-4bc8-89ec-02374f5a0f2f">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1351,8 +1033,8 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Status code is 200</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
@@ -1363,79 +1045,55 @@ body.theme-light code {
                                                 </tr>
                                                 <tr >
                                                     <td >Response has required top-level fields</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >Temperature is a number</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >Weather array is not empty</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >humidity is within valid range(0-100)</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >Returned city matches resolved city from geocoding step</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
-                                                    <td class="text-center">6</td>
+                                                    <td class="text-center">7</td>
+                                                    <td class="text-center">0</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row ">
+                                    <div class="row d-none">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
                                             <div class="card-body">
-                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failures</h5>
+                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failure</h5>
                                                 <div class="table-responsive">
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Status code is 200</td>
-                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 401</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Response has required top-level fields</td>
-                                                                <td class="w-55"><pre><code >expected { cod: 401, …(1) } to have property &#x27;main&#x27;</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Temperature is a number</td>
-                                                                <td class="w-55"><pre><code >Cannot read properties of undefined (reading &#x27;temp&#x27;)</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Weather array is not empty</td>
-                                                                <td class="w-55"><pre><code >expected undefined to be an array</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">humidity is within valid range(0-100)</td>
-                                                                <td class="w-55"><pre><code >Cannot read properties of undefined (reading &#x27;humidity&#x27;)</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Returned city matches resolved city from geocoding step</td>
-                                                                <td class="w-55"><pre><code >Cannot read properties of undefined (reading &#x27;toLowerCase&#x27;)</code></pre></td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1453,16 +1111,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-48d6ff42-80eb-4885-8da0-d2e7d7139385" class="card-deck iteration-0">
+            <div id="folder-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-danger iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385" aria-expanded="false" aria-controls="collapse" id="requests-48d6ff42-80eb-4885-8da0-d2e7d7139385" class="collapsed text-white z-block">
+                    <div class="card-header  bg-success iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282" aria-expanded="false" aria-controls="collapse" id="requests-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282" class="collapsed text-white z-block">
                     Iteration: 1 - Get - 5 Day / 3 hours Forecast <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385" class="collapse" aria-labelledby="requests-48d6ff42-80eb-4885-8da0-d2e7d7139385">
+                    <div id="collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282" class="collapse" aria-labelledby="requests-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1471,21 +1129,21 @@ body.theme-light code {
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Request Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Request Method:</strong> <span class="badge-outline-success badge badge-success"> GET</span><br>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://api.openweathermap.org/data/2.5/forecast?lat&#x3D;39.9334&amp;lon&#x3D;32.8597&amp;units&#x3D;metric&amp;appid&#x3D;YOUR_API_KEY_HERE" target="_blank">https://api.openweathermap.org/data/2.5/forecast?lat&#x3D;39.9334&amp;lon&#x3D;32.8597&amp;units&#x3D;metric&amp;appid&#x3D;YOUR_API_KEY_HERE</a><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://api.openweathermap.org/data/2.5/forecast?lat&#x3D;39.9207759&amp;lon&#x3D;32.8540497&amp;units&#x3D;metric&amp;appid&#x3D;983ca0e677744057900d2e7afe86a92d" target="_blank">https://api.openweathermap.org/data/2.5/forecast?lat&#x3D;39.9207759&amp;lon&#x3D;32.8540497&amp;units&#x3D;metric&amp;appid&#x3D;983ca0e677744057900d2e7afe86a92d</a><br>
                                     </div>
                                 </div>
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 401 - Unauthorized</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 30ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 108B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 65ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 16.47KB</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
+                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1518,7 +1176,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">8a0b5e1b-eff0-4dd0-ab8b-14f172da8723</td>
+                                                        <td class="text-wrap">94e028ed-f01e-435d-940c-8741707b5205</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1552,7 +1210,7 @@ body.theme-light code {
                                             <tbody>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Sun, 11 Oct 2026 17:06:42 GMT</td>
+                                                    <td class="text-wrap">Sun, 11 Oct 2026 17:26:59 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
@@ -1560,7 +1218,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">108</td>
+                                                    <td class="text-wrap">16870</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
@@ -1568,7 +1226,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cache-Key</td>
-                                                    <td class="text-wrap">/data/2.5/forecast?lat&#x3D;39.93&amp;lon&#x3D;32.86&amp;units&#x3D;metric</td>
+                                                    <td class="text-wrap">/data/2.5/forecast?lat&#x3D;39.92&amp;lon&#x3D;32.85&amp;units&#x3D;metric</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Access-Control-Allow-Origin</td>
@@ -1597,10 +1255,10 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-baa5b52a-8718-455e-9d42-dc978339d891" class="prettyPrint">{&quot;cod&quot;:401, &quot;message&quot;: &quot;Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.&quot;}</code></pre>
+                                                <pre><code id="copyText-3f5cc3cc-ec09-420d-913d-5229085c5790" class="prettyPrint">{&quot;cod&quot;:&quot;200&quot;,&quot;message&quot;:0,&quot;cnt&quot;:40,&quot;list&quot;:[{&quot;dt&quot;:1791741600,&quot;main&quot;:{&quot;temp&quot;:21.23,&quot;feels_like&quot;:20.45,&quot;temp_min&quot;:17.43,&quot;temp_max&quot;:21.23,&quot;pressure&quot;:1012,&quot;sea_level&quot;:1012,&quot;grnd_level&quot;:900,&quot;humidity&quot;:40,&quot;temp_kf&quot;:3.8,&quot;dew_point&quot;:7.11},&quot;weather&quot;:[{&quot;id&quot;:800,&quot;main&quot;:&quot;Clear&quot;,&quot;description&quot;:&quot;clear sky&quot;,&quot;icon&quot;:&quot;01n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:5},&quot;wind&quot;:{&quot;speed&quot;:1.66,&quot;deg&quot;:87,&quot;gust&quot;:3.44},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-11 18:00:00&quot;},{&quot;dt&quot;:1791752400,&quot;main&quot;:{&quot;temp&quot;:17.87,&quot;feels_like&quot;:16.94,&quot;temp_min&quot;:11.16,&quot;temp_max&quot;:17.87,&quot;pressure&quot;:1012,&quot;sea_level&quot;:1012,&quot;grnd_level&quot;:900,&quot;humidity&quot;:47,&quot;temp_kf&quot;:6.71,&quot;dew_point&quot;:6.41},&quot;weather&quot;:[{&quot;id&quot;:800,&quot;main&quot;:&quot;Clear&quot;,&quot;description&quot;:&quot;clear sky&quot;,&quot;icon&quot;:&quot;01n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:6},&quot;wind&quot;:{&quot;speed&quot;:1.43,&quot;deg&quot;:49,&quot;gust&quot;:2.8},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-11 21:00:00&quot;},{&quot;dt&quot;:1791763200,&quot;main&quot;:{&quot;temp&quot;:12.92,&quot;feels_like&quot;:11.91,&quot;temp_min&quot;:8.77,&quot;temp_max&quot;:12.92,&quot;pressure&quot;:1013,&quot;sea_level&quot;:1013,&quot;grnd_level&quot;:900,&quot;humidity&quot;:63,&quot;temp_kf&quot;:4.15,&quot;dew_point&quot;:6.05},&quot;weather&quot;:[{&quot;id&quot;:802,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;scattered clouds&quot;,&quot;icon&quot;:&quot;03n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:30},&quot;wind&quot;:{&quot;speed&quot;:1.22,&quot;deg&quot;:47,&quot;gust&quot;:2.46},&quot;visibility&quot;:10000,&quot;pop&quot;:0.05,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-12 00:00:00&quot;},{&quot;dt&quot;:1791774000,&quot;main&quot;:{&quot;temp&quot;:7.41,&quot;feels_like&quot;:6.29,&quot;temp_min&quot;:7.41,&quot;temp_max&quot;:7.41,&quot;pressure&quot;:1015,&quot;sea_level&quot;:1015,&quot;grnd_level&quot;:901,&quot;humidity&quot;:94,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:9.1},&quot;weather&quot;:[{&quot;id&quot;:501,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;moderate rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:21},&quot;wind&quot;:{&quot;speed&quot;:1.88,&quot;deg&quot;:78,&quot;gust&quot;:3.82},&quot;visibility&quot;:10000,&quot;pop&quot;:0.2,&quot;rain&quot;:{&quot;3h&quot;:4.19},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-12 03:00:00&quot;},{&quot;dt&quot;:1791784800,&quot;main&quot;:{&quot;temp&quot;:17.76,&quot;feels_like&quot;:17.78,&quot;temp_min&quot;:17.76,&quot;temp_max&quot;:17.76,&quot;pressure&quot;:1015,&quot;sea_level&quot;:1015,&quot;grnd_level&quot;:901,&quot;humidity&quot;:84,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.61},&quot;weather&quot;:[{&quot;id&quot;:802,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;scattered clouds&quot;,&quot;icon&quot;:&quot;03d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:42},&quot;wind&quot;:{&quot;speed&quot;:1.48,&quot;deg&quot;:40,&quot;gust&quot;:3.77},&quot;visibility&quot;:10000,&quot;pop&quot;:0.08,&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-12 06:00:00&quot;},{&quot;dt&quot;:1791795600,&quot;main&quot;:{&quot;temp&quot;:22.58,&quot;feels_like&quot;:22.23,&quot;temp_min&quot;:22.58,&quot;temp_max&quot;:22.58,&quot;pressure&quot;:1014,&quot;sea_level&quot;:1014,&quot;grnd_level&quot;:901,&quot;humidity&quot;:51,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.61},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:47},&quot;wind&quot;:{&quot;speed&quot;:3.19,&quot;deg&quot;:166,&quot;gust&quot;:8.92},&quot;visibility&quot;:10000,&quot;pop&quot;:0.29,&quot;rain&quot;:{&quot;3h&quot;:0.24},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-12 09:00:00&quot;},{&quot;dt&quot;:1791806400,&quot;main&quot;:{&quot;temp&quot;:23.91,&quot;feels_like&quot;:23.58,&quot;temp_min&quot;:23.91,&quot;temp_max&quot;:23.91,&quot;pressure&quot;:1012,&quot;sea_level&quot;:1012,&quot;grnd_level&quot;:899,&quot;humidity&quot;:47,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.38},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:93},&quot;wind&quot;:{&quot;speed&quot;:2.4,&quot;deg&quot;:162,&quot;gust&quot;:6.87},&quot;visibility&quot;:10000,&quot;pop&quot;:0.2,&quot;rain&quot;:{&quot;3h&quot;:0.2},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-12 12:00:00&quot;},{&quot;dt&quot;:1791817200,&quot;main&quot;:{&quot;temp&quot;:18.68,&quot;feels_like&quot;:18.74,&quot;temp_min&quot;:18.68,&quot;temp_max&quot;:18.68,&quot;pressure&quot;:1014,&quot;sea_level&quot;:1014,&quot;grnd_level&quot;:900,&quot;humidity&quot;:82,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:13.45},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:86},&quot;wind&quot;:{&quot;speed&quot;:0.63,&quot;deg&quot;:335,&quot;gust&quot;:1.87},&quot;visibility&quot;:10000,&quot;pop&quot;:0.38,&quot;rain&quot;:{&quot;3h&quot;:0.67},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-12 15:00:00&quot;},{&quot;dt&quot;:1791828000,&quot;main&quot;:{&quot;temp&quot;:16.87,&quot;feels_like&quot;:16.86,&quot;temp_min&quot;:16.87,&quot;temp_max&quot;:16.87,&quot;pressure&quot;:1015,&quot;sea_level&quot;:1015,&quot;grnd_level&quot;:901,&quot;humidity&quot;:86,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.81},&quot;weather&quot;:[{&quot;id&quot;:803,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;broken clouds&quot;,&quot;icon&quot;:&quot;04n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:74},&quot;wind&quot;:{&quot;speed&quot;:1.59,&quot;deg&quot;:107,&quot;gust&quot;:3.34},&quot;visibility&quot;:10000,&quot;pop&quot;:0.25,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-12 18:00:00&quot;},{&quot;dt&quot;:1791838800,&quot;main&quot;:{&quot;temp&quot;:10.19,&quot;feels_like&quot;:9.59,&quot;temp_min&quot;:10.19,&quot;temp_max&quot;:10.19,&quot;pressure&quot;:1016,&quot;sea_level&quot;:1016,&quot;grnd_level&quot;:902,&quot;humidity&quot;:89,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.96},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:74},&quot;wind&quot;:{&quot;speed&quot;:0.71,&quot;deg&quot;:14,&quot;gust&quot;:1.56},&quot;visibility&quot;:10000,&quot;pop&quot;:0.37,&quot;rain&quot;:{&quot;3h&quot;:0.19},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-12 21:00:00&quot;},{&quot;dt&quot;:1791849600,&quot;main&quot;:{&quot;temp&quot;:7.77,&quot;feels_like&quot;:7.77,&quot;temp_min&quot;:7.77,&quot;temp_max&quot;:7.77,&quot;pressure&quot;:1017,&quot;sea_level&quot;:1017,&quot;grnd_level&quot;:902,&quot;humidity&quot;:96,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.6},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:93},&quot;wind&quot;:{&quot;speed&quot;:1.11,&quot;deg&quot;:115,&quot;gust&quot;:2.47},&quot;visibility&quot;:10000,&quot;pop&quot;:0.2,&quot;rain&quot;:{&quot;3h&quot;:0.79},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-13 00:00:00&quot;},{&quot;dt&quot;:1791860400,&quot;main&quot;:{&quot;temp&quot;:6.68,&quot;feels_like&quot;:6.68,&quot;temp_min&quot;:6.68,&quot;temp_max&quot;:6.68,&quot;pressure&quot;:1017,&quot;sea_level&quot;:1017,&quot;grnd_level&quot;:902,&quot;humidity&quot;:99,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:9.33},&quot;weather&quot;:[{&quot;id&quot;:800,&quot;main&quot;:&quot;Clear&quot;,&quot;description&quot;:&quot;clear sky&quot;,&quot;icon&quot;:&quot;01n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:1},&quot;wind&quot;:{&quot;speed&quot;:0.76,&quot;deg&quot;:57,&quot;gust&quot;:1.51},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-13 03:00:00&quot;},{&quot;dt&quot;:1791871200,&quot;main&quot;:{&quot;temp&quot;:11.39,&quot;feels_like&quot;:10.99,&quot;temp_min&quot;:11.39,&quot;temp_max&quot;:11.39,&quot;pressure&quot;:1017,&quot;sea_level&quot;:1017,&quot;grnd_level&quot;:902,&quot;humidity&quot;:92,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.6},&quot;weather&quot;:[{&quot;id&quot;:800,&quot;main&quot;:&quot;Clear&quot;,&quot;description&quot;:&quot;clear sky&quot;,&quot;icon&quot;:&quot;01d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:0},&quot;wind&quot;:{&quot;speed&quot;:0.5,&quot;deg&quot;:90,&quot;gust&quot;:2.87},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-13 06:00:00&quot;},{&quot;dt&quot;:1791882000,&quot;main&quot;:{&quot;temp&quot;:17.84,&quot;feels_like&quot;:17.4,&quot;temp_min&quot;:17.84,&quot;temp_max&quot;:17.84,&quot;pressure&quot;:1017,&quot;sea_level&quot;:1017,&quot;grnd_level&quot;:903,&quot;humidity&quot;:66,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.5},&quot;weather&quot;:[{&quot;id&quot;:802,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;scattered clouds&quot;,&quot;icon&quot;:&quot;03d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:40},&quot;wind&quot;:{&quot;speed&quot;:1.92,&quot;deg&quot;:218,&quot;gust&quot;:7.09},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-13 09:00:00&quot;},{&quot;dt&quot;:1791892800,&quot;main&quot;:{&quot;temp&quot;:19,&quot;feels_like&quot;:18.42,&quot;temp_min&quot;:19,&quot;temp_max&quot;:19,&quot;pressure&quot;:1015,&quot;sea_level&quot;:1015,&quot;grnd_level&quot;:901,&quot;humidity&quot;:56,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:9.99},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:74},&quot;wind&quot;:{&quot;speed&quot;:2.39,&quot;deg&quot;:235,&quot;gust&quot;:7.06},&quot;visibility&quot;:10000,&quot;pop&quot;:0.25,&quot;rain&quot;:{&quot;3h&quot;:0.11},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-13 12:00:00&quot;},{&quot;dt&quot;:1791903600,&quot;main&quot;:{&quot;temp&quot;:16.73,&quot;feels_like&quot;:16.21,&quot;temp_min&quot;:16.73,&quot;temp_max&quot;:16.73,&quot;pressure&quot;:1015,&quot;sea_level&quot;:1015,&quot;grnd_level&quot;:901,&quot;humidity&quot;:67,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.5},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:88},&quot;wind&quot;:{&quot;speed&quot;:1.05,&quot;deg&quot;:286,&quot;gust&quot;:2.54},&quot;visibility&quot;:10000,&quot;pop&quot;:0.2,&quot;rain&quot;:{&quot;3h&quot;:0.31},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-13 15:00:00&quot;},{&quot;dt&quot;:1791914400,&quot;main&quot;:{&quot;temp&quot;:13.98,&quot;feels_like&quot;:13.5,&quot;temp_min&quot;:13.98,&quot;temp_max&quot;:13.98,&quot;pressure&quot;:1016,&quot;sea_level&quot;:1016,&quot;grnd_level&quot;:902,&quot;humidity&quot;:79,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.42},&quot;weather&quot;:[{&quot;id&quot;:804,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;overcast clouds&quot;,&quot;icon&quot;:&quot;04n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:88},&quot;wind&quot;:{&quot;speed&quot;:0.91,&quot;deg&quot;:69,&quot;gust&quot;:2.06},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-13 18:00:00&quot;},{&quot;dt&quot;:1791925200,&quot;main&quot;:{&quot;temp&quot;:11.85,&quot;feels_like&quot;:11.36,&quot;temp_min&quot;:11.85,&quot;temp_max&quot;:11.85,&quot;pressure&quot;:1016,&quot;sea_level&quot;:1016,&quot;grnd_level&quot;:902,&quot;humidity&quot;:87,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:9.69},&quot;weather&quot;:[{&quot;id&quot;:804,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;overcast clouds&quot;,&quot;icon&quot;:&quot;04n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:90},&quot;wind&quot;:{&quot;speed&quot;:1.04,&quot;deg&quot;:47,&quot;gust&quot;:2.02},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-13 21:00:00&quot;},{&quot;dt&quot;:1791936000,&quot;main&quot;:{&quot;temp&quot;:10.45,&quot;feels_like&quot;:9.9,&quot;temp_min&quot;:10.45,&quot;temp_max&quot;:10.45,&quot;pressure&quot;:1016,&quot;sea_level&quot;:1016,&quot;grnd_level&quot;:902,&quot;humidity&quot;:90,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:8.85},&quot;weather&quot;:[{&quot;id&quot;:804,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;overcast clouds&quot;,&quot;icon&quot;:&quot;04n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:87},&quot;wind&quot;:{&quot;speed&quot;:0.81,&quot;deg&quot;:46,&quot;gust&quot;:1.69},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-14 00:00:00&quot;},{&quot;dt&quot;:1791946800,&quot;main&quot;:{&quot;temp&quot;:9.62,&quot;feels_like&quot;:9.62,&quot;temp_min&quot;:9.62,&quot;temp_max&quot;:9.62,&quot;pressure&quot;:1016,&quot;sea_level&quot;:1016,&quot;grnd_level&quot;:901,&quot;humidity&quot;:91,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:8.16},&quot;weather&quot;:[{&quot;id&quot;:801,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;few clouds&quot;,&quot;icon&quot;:&quot;02n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:11},&quot;wind&quot;:{&quot;speed&quot;:1.23,&quot;deg&quot;:58,&quot;gust&quot;:2.51},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-14 03:00:00&quot;},{&quot;dt&quot;:1791957600,&quot;main&quot;:{&quot;temp&quot;:13.69,&quot;feels_like&quot;:13.13,&quot;temp_min&quot;:13.69,&quot;temp_max&quot;:13.69,&quot;pressure&quot;:1017,&quot;sea_level&quot;:1017,&quot;grnd_level&quot;:902,&quot;humidity&quot;:77,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:9.59},&quot;weather&quot;:[{&quot;id&quot;:803,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;broken clouds&quot;,&quot;icon&quot;:&quot;04d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:67},&quot;wind&quot;:{&quot;speed&quot;:1.43,&quot;deg&quot;:41,&quot;gust&quot;:3.96},&quot;visibility&quot;:10000,&quot;pop&quot;:0.04,&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-14 06:00:00&quot;},{&quot;dt&quot;:1791968400,&quot;main&quot;:{&quot;temp&quot;:19.54,&quot;feels_like&quot;:18.93,&quot;temp_min&quot;:19.54,&quot;temp_max&quot;:19.54,&quot;pressure&quot;:1016,&quot;sea_level&quot;:1016,&quot;grnd_level&quot;:902,&quot;humidity&quot;:53,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:9.86},&quot;weather&quot;:[{&quot;id&quot;:803,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;broken clouds&quot;,&quot;icon&quot;:&quot;04d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:64},&quot;wind&quot;:{&quot;speed&quot;:2.03,&quot;deg&quot;:143,&quot;gust&quot;:6.46},&quot;visibility&quot;:10000,&quot;pop&quot;:0.23,&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-14 09:00:00&quot;},{&quot;dt&quot;:1791979200,&quot;main&quot;:{&quot;temp&quot;:20.28,&quot;feels_like&quot;:19.38,&quot;temp_min&quot;:20.28,&quot;temp_max&quot;:20.28,&quot;pressure&quot;:1014,&quot;sea_level&quot;:1014,&quot;grnd_level&quot;:901,&quot;humidity&quot;:39,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:5.8},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:98},&quot;wind&quot;:{&quot;speed&quot;:2.87,&quot;deg&quot;:172,&quot;gust&quot;:7.11},&quot;visibility&quot;:10000,&quot;pop&quot;:0.2,&quot;rain&quot;:{&quot;3h&quot;:0.12},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-14 12:00:00&quot;},{&quot;dt&quot;:1791990000,&quot;main&quot;:{&quot;temp&quot;:16.74,&quot;feels_like&quot;:15.88,&quot;temp_min&quot;:16.74,&quot;temp_max&quot;:16.74,&quot;pressure&quot;:1015,&quot;sea_level&quot;:1015,&quot;grnd_level&quot;:901,&quot;humidity&quot;:54,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:7.45},&quot;weather&quot;:[{&quot;id&quot;:804,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;overcast clouds&quot;,&quot;icon&quot;:&quot;04d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:2.34,&quot;deg&quot;:200,&quot;gust&quot;:4.73},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-14 15:00:00&quot;},{&quot;dt&quot;:1792000800,&quot;main&quot;:{&quot;temp&quot;:14.21,&quot;feels_like&quot;:13.8,&quot;temp_min&quot;:14.21,&quot;temp_max&quot;:14.21,&quot;pressure&quot;:1015,&quot;sea_level&quot;:1015,&quot;grnd_level&quot;:901,&quot;humidity&quot;:81,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.01},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.1,&quot;deg&quot;:3,&quot;gust&quot;:2.23},&quot;visibility&quot;:10000,&quot;pop&quot;:0.2,&quot;rain&quot;:{&quot;3h&quot;:0.17},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-14 18:00:00&quot;},{&quot;dt&quot;:1792011600,&quot;main&quot;:{&quot;temp&quot;:13.58,&quot;feels_like&quot;:13.16,&quot;temp_min&quot;:13.58,&quot;temp_max&quot;:13.58,&quot;pressure&quot;:1015,&quot;sea_level&quot;:1015,&quot;grnd_level&quot;:900,&quot;humidity&quot;:83,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.65},&quot;weather&quot;:[{&quot;id&quot;:804,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;overcast clouds&quot;,&quot;icon&quot;:&quot;04n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.32,&quot;deg&quot;:16,&quot;gust&quot;:2.75},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-14 21:00:00&quot;},{&quot;dt&quot;:1792022400,&quot;main&quot;:{&quot;temp&quot;:12.69,&quot;feels_like&quot;:12.31,&quot;temp_min&quot;:12.69,&quot;temp_max&quot;:12.69,&quot;pressure&quot;:1014,&quot;sea_level&quot;:1014,&quot;grnd_level&quot;:900,&quot;humidity&quot;:88,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.65},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:0.43,&quot;deg&quot;:301,&quot;gust&quot;:1.05},&quot;visibility&quot;:10000,&quot;pop&quot;:0.6,&quot;rain&quot;:{&quot;3h&quot;:0.21},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-15 00:00:00&quot;},{&quot;dt&quot;:1792033200,&quot;main&quot;:{&quot;temp&quot;:12.13,&quot;feels_like&quot;:11.83,&quot;temp_min&quot;:12.13,&quot;temp_max&quot;:12.13,&quot;pressure&quot;:1013,&quot;sea_level&quot;:1013,&quot;grnd_level&quot;:899,&quot;humidity&quot;:93,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.9},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:0.87,&quot;deg&quot;:36,&quot;gust&quot;:2.12},&quot;visibility&quot;:10000,&quot;pop&quot;:0.2,&quot;rain&quot;:{&quot;3h&quot;:0.63},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-15 03:00:00&quot;},{&quot;dt&quot;:1792044000,&quot;main&quot;:{&quot;temp&quot;:12.88,&quot;feels_like&quot;:12.65,&quot;temp_min&quot;:12.88,&quot;temp_max&quot;:12.88,&quot;pressure&quot;:1013,&quot;sea_level&quot;:1013,&quot;grnd_level&quot;:898,&quot;humidity&quot;:93,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.7},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:0.84,&quot;deg&quot;:343,&quot;gust&quot;:2.4},&quot;visibility&quot;:5342,&quot;pop&quot;:1,&quot;rain&quot;:{&quot;3h&quot;:0.33},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-15 06:00:00&quot;},{&quot;dt&quot;:1792054800,&quot;main&quot;:{&quot;temp&quot;:13.5,&quot;feels_like&quot;:13.31,&quot;temp_min&quot;:13.5,&quot;temp_max&quot;:13.5,&quot;pressure&quot;:1012,&quot;sea_level&quot;:1012,&quot;grnd_level&quot;:898,&quot;humidity&quot;:92,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:12.09},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.23,&quot;deg&quot;:312,&quot;gust&quot;:3.31},&quot;visibility&quot;:4613,&quot;pop&quot;:1,&quot;rain&quot;:{&quot;3h&quot;:1.83},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-15 09:00:00&quot;},{&quot;dt&quot;:1792065600,&quot;main&quot;:{&quot;temp&quot;:13.73,&quot;feels_like&quot;:13.46,&quot;temp_min&quot;:13.73,&quot;temp_max&quot;:13.73,&quot;pressure&quot;:1011,&quot;sea_level&quot;:1011,&quot;grnd_level&quot;:897,&quot;humidity&quot;:88,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.7},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.69,&quot;deg&quot;:249,&quot;gust&quot;:4.04},&quot;visibility&quot;:6026,&quot;pop&quot;:1,&quot;rain&quot;:{&quot;3h&quot;:1.53},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-15 12:00:00&quot;},{&quot;dt&quot;:1792076400,&quot;main&quot;:{&quot;temp&quot;:12.47,&quot;feels_like&quot;:12.23,&quot;temp_min&quot;:12.47,&quot;temp_max&quot;:12.47,&quot;pressure&quot;:1011,&quot;sea_level&quot;:1011,&quot;grnd_level&quot;:897,&quot;humidity&quot;:94,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.41},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.67,&quot;deg&quot;:248,&quot;gust&quot;:3.56},&quot;visibility&quot;:3409,&quot;pop&quot;:1,&quot;rain&quot;:{&quot;3h&quot;:2.94},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-15 15:00:00&quot;},{&quot;dt&quot;:1792087200,&quot;main&quot;:{&quot;temp&quot;:11.88,&quot;feels_like&quot;:11.68,&quot;temp_min&quot;:11.88,&quot;temp_max&quot;:11.88,&quot;pressure&quot;:1012,&quot;sea_level&quot;:1012,&quot;grnd_level&quot;:897,&quot;humidity&quot;:98,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.55},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.48,&quot;deg&quot;:243,&quot;gust&quot;:3.01},&quot;visibility&quot;:3187,&quot;pop&quot;:1,&quot;rain&quot;:{&quot;3h&quot;:2.31},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-15 18:00:00&quot;},{&quot;dt&quot;:1792098000,&quot;main&quot;:{&quot;temp&quot;:11.76,&quot;feels_like&quot;:11.58,&quot;temp_min&quot;:11.76,&quot;temp_max&quot;:11.76,&quot;pressure&quot;:1012,&quot;sea_level&quot;:1012,&quot;grnd_level&quot;:897,&quot;humidity&quot;:99,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.47},&quot;weather&quot;:[{&quot;id&quot;:501,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;moderate rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.47,&quot;deg&quot;:268,&quot;gust&quot;:3.15},&quot;visibility&quot;:2931,&quot;pop&quot;:1,&quot;rain&quot;:{&quot;3h&quot;:3.18},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-15 21:00:00&quot;},{&quot;dt&quot;:1792108800,&quot;main&quot;:{&quot;temp&quot;:11.58,&quot;feels_like&quot;:11.33,&quot;temp_min&quot;:11.58,&quot;temp_max&quot;:11.58,&quot;pressure&quot;:1012,&quot;sea_level&quot;:1012,&quot;grnd_level&quot;:898,&quot;humidity&quot;:97,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:11.03},&quot;weather&quot;:[{&quot;id&quot;:501,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;moderate rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.37,&quot;deg&quot;:268,&quot;gust&quot;:2.94},&quot;visibility&quot;:3258,&quot;pop&quot;:1,&quot;rain&quot;:{&quot;3h&quot;:3.75},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-16 00:00:00&quot;},{&quot;dt&quot;:1792119600,&quot;main&quot;:{&quot;temp&quot;:11.26,&quot;feels_like&quot;:10.9,&quot;temp_min&quot;:11.26,&quot;temp_max&quot;:11.26,&quot;pressure&quot;:1012,&quot;sea_level&quot;:1012,&quot;grnd_level&quot;:898,&quot;humidity&quot;:94,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:10.31},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10n&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.85,&quot;deg&quot;:310,&quot;gust&quot;:3.94},&quot;visibility&quot;:5684,&quot;pop&quot;:1,&quot;rain&quot;:{&quot;3h&quot;:2.73},&quot;sys&quot;:{&quot;pod&quot;:&quot;n&quot;},&quot;dt_txt&quot;:&quot;2026-10-16 03:00:00&quot;},{&quot;dt&quot;:1792130400,&quot;main&quot;:{&quot;temp&quot;:11.48,&quot;feels_like&quot;:11.01,&quot;temp_min&quot;:11.48,&quot;temp_max&quot;:11.48,&quot;pressure&quot;:1013,&quot;sea_level&quot;:1013,&quot;grnd_level&quot;:899,&quot;humidity&quot;:89,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:9.57},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.5,&quot;deg&quot;:329,&quot;gust&quot;:3.66},&quot;visibility&quot;:9905,&quot;pop&quot;:0.69,&quot;rain&quot;:{&quot;3h&quot;:0.45},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-16 06:00:00&quot;},{&quot;dt&quot;:1792141200,&quot;main&quot;:{&quot;temp&quot;:12.3,&quot;feels_like&quot;:11.62,&quot;temp_min&quot;:12.3,&quot;temp_max&quot;:12.3,&quot;pressure&quot;:1013,&quot;sea_level&quot;:1013,&quot;grnd_level&quot;:898,&quot;humidity&quot;:78,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:8.53},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.3,&quot;deg&quot;:348,&quot;gust&quot;:3.45},&quot;visibility&quot;:6609,&quot;pop&quot;:0.92,&quot;rain&quot;:{&quot;3h&quot;:0.39},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-16 09:00:00&quot;},{&quot;dt&quot;:1792152000,&quot;main&quot;:{&quot;temp&quot;:12.81,&quot;feels_like&quot;:12.1,&quot;temp_min&quot;:12.81,&quot;temp_max&quot;:12.81,&quot;pressure&quot;:1012,&quot;sea_level&quot;:1012,&quot;grnd_level&quot;:897,&quot;humidity&quot;:75,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:8.43},&quot;weather&quot;:[{&quot;id&quot;:500,&quot;main&quot;:&quot;Rain&quot;,&quot;description&quot;:&quot;light rain&quot;,&quot;icon&quot;:&quot;10d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.17,&quot;deg&quot;:344,&quot;gust&quot;:3.45},&quot;visibility&quot;:10000,&quot;pop&quot;:0.2,&quot;rain&quot;:{&quot;3h&quot;:0.36},&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-16 12:00:00&quot;},{&quot;dt&quot;:1792162800,&quot;main&quot;:{&quot;temp&quot;:12.58,&quot;feels_like&quot;:11.8,&quot;temp_min&quot;:12.58,&quot;temp_max&quot;:12.58,&quot;pressure&quot;:1011,&quot;sea_level&quot;:1011,&quot;grnd_level&quot;:897,&quot;humidity&quot;:73,&quot;temp_kf&quot;:0,&quot;dew_point&quot;:7.79},&quot;weather&quot;:[{&quot;id&quot;:804,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;overcast clouds&quot;,&quot;icon&quot;:&quot;04d&quot;}],&quot;clouds&quot;:{&quot;all&quot;:100},&quot;wind&quot;:{&quot;speed&quot;:1.16,&quot;deg&quot;:342,&quot;gust&quot;:2.74},&quot;visibility&quot;:10000,&quot;pop&quot;:0,&quot;sys&quot;:{&quot;pod&quot;:&quot;d&quot;},&quot;dt_txt&quot;:&quot;2026-10-16 15:00:00&quot;}],&quot;city&quot;:{&quot;id&quot;:323786,&quot;name&quot;:&quot;Ankara&quot;,&quot;coord&quot;:{&quot;lat&quot;:39.9208,&quot;lon&quot;:32.854},&quot;country&quot;:&quot;TR&quot;,&quot;population&quot;:3517182,&quot;timezone&quot;:10800,&quot;sunrise&quot;:1791690857,&quot;sunset&quot;:1791731771}}</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-baa5b52a-8718-455e-9d42-dc978339d891">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-3f5cc3cc-ec09-420d-913d-5229085c5790">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1617,55 +1275,43 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Status code is 200</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >Response has a list array with entries</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >Every forecast entry has valid data</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">0</td>
                                                     <td class="text-center">3</td>
+                                                    <td class="text-center">0</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row ">
+                                    <div class="row d-none">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
                                             <div class="card-body">
-                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failures</h5>
+                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failure</h5>
                                                 <div class="table-responsive">
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Status code is 200</td>
-                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 401</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Response has a list array with entries</td>
-                                                                <td class="w-55"><pre><code >expected { cod: 401, …(1) } to have property &#x27;list&#x27;</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Every forecast entry has valid data</td>
-                                                                <td class="w-55"><pre><code >Cannot read properties of undefined (reading &#x27;forEach&#x27;)</code></pre></td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1683,16 +1329,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68" class="card-deck iteration-0">
+            <div id="folder-27de3e08-9010-481d-bf3d-7dd354dd22e2" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-danger iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68" aria-expanded="false" aria-controls="collapse" id="requests-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68" class="collapsed text-white z-block">
+                    <div class="card-header  bg-success iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2" aria-expanded="false" aria-controls="collapse" id="requests-27de3e08-9010-481d-bf3d-7dd354dd22e2" class="collapsed text-white z-block">
                     Iteration: 1 - Get - 5 Day Air Pollution / AQI Data <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68" class="collapse" aria-labelledby="requests-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68">
+                    <div id="collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2" class="collapse" aria-labelledby="requests-27de3e08-9010-481d-bf3d-7dd354dd22e2">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1701,21 +1347,21 @@ body.theme-light code {
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Request Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Request Method:</strong> <span class="badge-outline-success badge badge-success"> GET</span><br>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://api.openweathermap.org/data/2.5/air_pollution?lat&#x3D;39.9334&amp;lon&#x3D;32.8597&amp;appid&#x3D;YOUR_API_KEY_HERE" target="_blank">https://api.openweathermap.org/data/2.5/air_pollution?lat&#x3D;39.9334&amp;lon&#x3D;32.8597&amp;appid&#x3D;YOUR_API_KEY_HERE</a><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://api.openweathermap.org/data/2.5/air_pollution?lat&#x3D;39.9207759&amp;lon&#x3D;32.8540497&amp;appid&#x3D;983ca0e677744057900d2e7afe86a92d" target="_blank">https://api.openweathermap.org/data/2.5/air_pollution?lat&#x3D;39.9207759&amp;lon&#x3D;32.8540497&amp;appid&#x3D;983ca0e677744057900d2e7afe86a92d</a><br>
                                     </div>
                                 </div>
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 401 - Unauthorized</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 32ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 108B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 174ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 186B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
+                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1748,7 +1394,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">ddf619d1-5505-4638-8110-c73487e41ac5</td>
+                                                        <td class="text-wrap">d5b0b330-2523-412f-a76d-359960a19e93</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1782,7 +1428,7 @@ body.theme-light code {
                                             <tbody>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Sun, 11 Oct 2026 17:06:42 GMT</td>
+                                                    <td class="text-wrap">Sun, 11 Oct 2026 17:26:59 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
@@ -1790,7 +1436,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">108</td>
+                                                    <td class="text-wrap">186</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
@@ -1798,7 +1444,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cache-Key</td>
-                                                    <td class="text-wrap">/data/2.5/air_pollution?lat&#x3D;39.93&amp;lon&#x3D;32.86</td>
+                                                    <td class="text-wrap">/data/2.5/air_pollution?lat&#x3D;39.92&amp;lon&#x3D;32.85</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Access-Control-Allow-Origin</td>
@@ -1827,10 +1473,10 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-b1409420-b078-4fc2-8035-f9663ed9490e" class="prettyPrint">{&quot;cod&quot;:401, &quot;message&quot;: &quot;Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.&quot;}</code></pre>
+                                                <pre><code id="copyText-ac35d166-26e7-4607-9b0e-25cf996ae473" class="prettyPrint">{&quot;coord&quot;:{&quot;lon&quot;:32.854,&quot;lat&quot;:39.9208},&quot;list&quot;:[{&quot;main&quot;:{&quot;aqi&quot;:2},&quot;components&quot;:{&quot;co&quot;:226.2,&quot;no&quot;:0,&quot;no2&quot;:8.86,&quot;o3&quot;:77.25,&quot;so2&quot;:1.05,&quot;pm2_5&quot;:14.73,&quot;pm10&quot;:19.94,&quot;nh3&quot;:8.51},&quot;dt&quot;:1791739619}]}</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-b1409420-b078-4fc2-8035-f9663ed9490e">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-ac35d166-26e7-4607-9b0e-25cf996ae473">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1847,65 +1493,49 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Status code is 200</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >response has list array</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >Every AQI is a valid category (1-5)</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >Pollutant components are all non-negative numbers</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">0</td>
                                                     <td class="text-center">4</td>
+                                                    <td class="text-center">0</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row ">
+                                    <div class="row d-none">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
                                             <div class="card-body">
-                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failures</h5>
+                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failure</h5>
                                                 <div class="table-responsive">
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Status code is 200</td>
-                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 401</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">response has list array</td>
-                                                                <td class="w-55"><pre><code >expected { cod: 401, …(1) } to have property &#x27;list&#x27;</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Every AQI is a valid category (1-5)</td>
-                                                                <td class="w-55"><pre><code >Cannot read properties of undefined (reading &#x27;forEach&#x27;)</code></pre></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Pollutant components are all non-negative numbers</td>
-                                                                <td class="w-55"><pre><code >Cannot read properties of undefined (reading &#x27;forEach&#x27;)</code></pre></td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -2011,41 +1641,41 @@ $('#openAllRequests').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#requests-efd818e3-f9b9-4383-9985-670f24023529').removeClass('collapsed')
-            $('#collapse-efd818e3-f9b9-4383-9985-670f24023529').removeClass('collapsed')
-            $('#requests-efd818e3-f9b9-4383-9985-670f24023529').addClass('show')
-            $('#collapse-efd818e3-f9b9-4383-9985-670f24023529').addClass('show')
-            $('#requests-1789654e-35a0-4128-89ac-a8682c09b147').removeClass('collapsed')
-            $('#collapse-1789654e-35a0-4128-89ac-a8682c09b147').removeClass('collapsed')
-            $('#requests-1789654e-35a0-4128-89ac-a8682c09b147').addClass('show')
-            $('#collapse-1789654e-35a0-4128-89ac-a8682c09b147').addClass('show')
-            $('#requests-48d6ff42-80eb-4885-8da0-d2e7d7139385').removeClass('collapsed')
-            $('#collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385').removeClass('collapsed')
-            $('#requests-48d6ff42-80eb-4885-8da0-d2e7d7139385').addClass('show')
-            $('#collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385').addClass('show')
-            $('#requests-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').removeClass('collapsed')
-            $('#collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').removeClass('collapsed')
-            $('#requests-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').addClass('show')
-            $('#collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').addClass('show')
+            $('#requests-82798e27-221c-42d2-bc89-8e6f72c2e542').removeClass('collapsed')
+            $('#collapse-82798e27-221c-42d2-bc89-8e6f72c2e542').removeClass('collapsed')
+            $('#requests-82798e27-221c-42d2-bc89-8e6f72c2e542').addClass('show')
+            $('#collapse-82798e27-221c-42d2-bc89-8e6f72c2e542').addClass('show')
+            $('#requests-6377a1e8-022c-44e8-a8c0-8a72b87a868b').removeClass('collapsed')
+            $('#collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b').removeClass('collapsed')
+            $('#requests-6377a1e8-022c-44e8-a8c0-8a72b87a868b').addClass('show')
+            $('#collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b').addClass('show')
+            $('#requests-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').removeClass('collapsed')
+            $('#collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').removeClass('collapsed')
+            $('#requests-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').addClass('show')
+            $('#collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').addClass('show')
+            $('#requests-27de3e08-9010-481d-bf3d-7dd354dd22e2').removeClass('collapsed')
+            $('#collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2').removeClass('collapsed')
+            $('#requests-27de3e08-9010-481d-bf3d-7dd354dd22e2').addClass('show')
+            $('#collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2').addClass('show')
         $('#openAllRequests').html("Collapse Requests");
         break;
     case 2:
-            $('#requests-efd818e3-f9b9-4383-9985-670f24023529').addClass('collapsed')
-            $('#collapse-efd818e3-f9b9-4383-9985-670f24023529').addClass('collapsed')
-            $('#requests-efd818e3-f9b9-4383-9985-670f24023529').removeClass('show')
-            $('#collapse-efd818e3-f9b9-4383-9985-670f24023529').removeClass('show')
-            $('#requests-1789654e-35a0-4128-89ac-a8682c09b147').addClass('collapsed')
-            $('#collapse-1789654e-35a0-4128-89ac-a8682c09b147').addClass('collapsed')
-            $('#requests-1789654e-35a0-4128-89ac-a8682c09b147').removeClass('show')
-            $('#collapse-1789654e-35a0-4128-89ac-a8682c09b147').removeClass('show')
-            $('#requests-48d6ff42-80eb-4885-8da0-d2e7d7139385').addClass('collapsed')
-            $('#collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385').addClass('collapsed')
-            $('#requests-48d6ff42-80eb-4885-8da0-d2e7d7139385').removeClass('show')
-            $('#collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385').removeClass('show')
-            $('#requests-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').addClass('collapsed')
-            $('#collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').addClass('collapsed')
-            $('#requests-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').removeClass('show')
-            $('#collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').removeClass('show')
+            $('#requests-82798e27-221c-42d2-bc89-8e6f72c2e542').addClass('collapsed')
+            $('#collapse-82798e27-221c-42d2-bc89-8e6f72c2e542').addClass('collapsed')
+            $('#requests-82798e27-221c-42d2-bc89-8e6f72c2e542').removeClass('show')
+            $('#collapse-82798e27-221c-42d2-bc89-8e6f72c2e542').removeClass('show')
+            $('#requests-6377a1e8-022c-44e8-a8c0-8a72b87a868b').addClass('collapsed')
+            $('#collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b').addClass('collapsed')
+            $('#requests-6377a1e8-022c-44e8-a8c0-8a72b87a868b').removeClass('show')
+            $('#collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b').removeClass('show')
+            $('#requests-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').addClass('collapsed')
+            $('#collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').addClass('collapsed')
+            $('#requests-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').removeClass('show')
+            $('#collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').removeClass('show')
+            $('#requests-27de3e08-9010-481d-bf3d-7dd354dd22e2').addClass('collapsed')
+            $('#collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2').addClass('collapsed')
+            $('#requests-27de3e08-9010-481d-bf3d-7dd354dd22e2').removeClass('show')
+            $('#collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2').removeClass('show')
         $('#openAllRequests').html("Expand Requests");
         break;
 }
@@ -2061,41 +1691,41 @@ $('#openAllSkipped').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#skipped-efd818e3-f9b9-4383-9985-670f24023529').removeClass('collapsed')
-            $('#skipped-collapse-efd818e3-f9b9-4383-9985-670f24023529').removeClass('collapsed')
-            $('#skipped-efd818e3-f9b9-4383-9985-670f24023529').addClass('show')
-            $('#skipped-collapse-efd818e3-f9b9-4383-9985-670f24023529').addClass('show')
-            $('#skipped-1789654e-35a0-4128-89ac-a8682c09b147').removeClass('collapsed')
-            $('#skipped-collapse-1789654e-35a0-4128-89ac-a8682c09b147').removeClass('collapsed')
-            $('#skipped-1789654e-35a0-4128-89ac-a8682c09b147').addClass('show')
-            $('#skipped-collapse-1789654e-35a0-4128-89ac-a8682c09b147').addClass('show')
-            $('#skipped-48d6ff42-80eb-4885-8da0-d2e7d7139385').removeClass('collapsed')
-            $('#skipped-collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385').removeClass('collapsed')
-            $('#skipped-48d6ff42-80eb-4885-8da0-d2e7d7139385').addClass('show')
-            $('#skipped-collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385').addClass('show')
-            $('#skipped-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').removeClass('collapsed')
-            $('#skipped-collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').removeClass('collapsed')
-            $('#skipped-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').addClass('show')
-            $('#skipped-collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').addClass('show')
+            $('#skipped-82798e27-221c-42d2-bc89-8e6f72c2e542').removeClass('collapsed')
+            $('#skipped-collapse-82798e27-221c-42d2-bc89-8e6f72c2e542').removeClass('collapsed')
+            $('#skipped-82798e27-221c-42d2-bc89-8e6f72c2e542').addClass('show')
+            $('#skipped-collapse-82798e27-221c-42d2-bc89-8e6f72c2e542').addClass('show')
+            $('#skipped-6377a1e8-022c-44e8-a8c0-8a72b87a868b').removeClass('collapsed')
+            $('#skipped-collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b').removeClass('collapsed')
+            $('#skipped-6377a1e8-022c-44e8-a8c0-8a72b87a868b').addClass('show')
+            $('#skipped-collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b').addClass('show')
+            $('#skipped-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').removeClass('collapsed')
+            $('#skipped-collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').removeClass('collapsed')
+            $('#skipped-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').addClass('show')
+            $('#skipped-collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').addClass('show')
+            $('#skipped-27de3e08-9010-481d-bf3d-7dd354dd22e2').removeClass('collapsed')
+            $('#skipped-collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2').removeClass('collapsed')
+            $('#skipped-27de3e08-9010-481d-bf3d-7dd354dd22e2').addClass('show')
+            $('#skipped-collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2').addClass('show')
         $('#openAllSkipped').html("Collapse All Skipped Tests");
         break;
     case 2:
-            $('#skipped-efd818e3-f9b9-4383-9985-670f24023529').addClass('collapsed')
-            $('#skipped-collapse-efd818e3-f9b9-4383-9985-670f24023529').addClass('collapsed')
-            $('#skipped-efd818e3-f9b9-4383-9985-670f24023529').removeClass('show')
-            $('#skipped-collapse-efd818e3-f9b9-4383-9985-670f24023529').removeClass('show')
-            $('#skipped-1789654e-35a0-4128-89ac-a8682c09b147').addClass('collapsed')
-            $('#skipped-collapse-1789654e-35a0-4128-89ac-a8682c09b147').addClass('collapsed')
-            $('#skipped-1789654e-35a0-4128-89ac-a8682c09b147').removeClass('show')
-            $('#skipped-collapse-1789654e-35a0-4128-89ac-a8682c09b147').removeClass('show')
-            $('#skipped-48d6ff42-80eb-4885-8da0-d2e7d7139385').addClass('collapsed')
-            $('#skipped-collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385').addClass('collapsed')
-            $('#skipped-48d6ff42-80eb-4885-8da0-d2e7d7139385').removeClass('show')
-            $('#skipped-collapse-48d6ff42-80eb-4885-8da0-d2e7d7139385').removeClass('show')
-            $('#skipped-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').addClass('collapsed')
-            $('#skipped-collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').addClass('collapsed')
-            $('#skipped-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').removeClass('show')
-            $('#skipped-collapse-93ab88c7-ddc7-40f8-b96a-6d48f93ecd68').removeClass('show')
+            $('#skipped-82798e27-221c-42d2-bc89-8e6f72c2e542').addClass('collapsed')
+            $('#skipped-collapse-82798e27-221c-42d2-bc89-8e6f72c2e542').addClass('collapsed')
+            $('#skipped-82798e27-221c-42d2-bc89-8e6f72c2e542').removeClass('show')
+            $('#skipped-collapse-82798e27-221c-42d2-bc89-8e6f72c2e542').removeClass('show')
+            $('#skipped-6377a1e8-022c-44e8-a8c0-8a72b87a868b').addClass('collapsed')
+            $('#skipped-collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b').addClass('collapsed')
+            $('#skipped-6377a1e8-022c-44e8-a8c0-8a72b87a868b').removeClass('show')
+            $('#skipped-collapse-6377a1e8-022c-44e8-a8c0-8a72b87a868b').removeClass('show')
+            $('#skipped-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').addClass('collapsed')
+            $('#skipped-collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').addClass('collapsed')
+            $('#skipped-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').removeClass('show')
+            $('#skipped-collapse-854d6b5d-c4c6-49f6-abc9-3dae2ed7c282').removeClass('show')
+            $('#skipped-27de3e08-9010-481d-bf3d-7dd354dd22e2').addClass('collapsed')
+            $('#skipped-collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2').addClass('collapsed')
+            $('#skipped-27de3e08-9010-481d-bf3d-7dd354dd22e2').removeClass('show')
+            $('#skipped-collapse-27de3e08-9010-481d-bf3d-7dd354dd22e2').removeClass('show')
         $('#openAllSkipped').html("Expand All Skipped Tests");
         break;
 }
@@ -2113,189 +1743,9 @@ let failedItemContent
 let failedItemHeading
 switch (clickCount){
     case 1:
-            failedItemHeading = $('#fails-6ef0bf5d-15a3-40f2-b820-220cff0da28a');
-            failedItemContent = $("#fails-collapse-6ef0bf5d-15a3-40f2-b820-220cff0da28a");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-3f7da3d5-832b-42a3-a25d-86893da00439');
-            failedItemContent = $("#fails-collapse-3f7da3d5-832b-42a3-a25d-86893da00439");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-230ebfff-e29b-428d-b065-750dc38990eb');
-            failedItemContent = $("#fails-collapse-230ebfff-e29b-428d-b065-750dc38990eb");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-dccf61d5-b497-4987-9a80-ab075c8df37e');
-            failedItemContent = $("#fails-collapse-dccf61d5-b497-4987-9a80-ab075c8df37e");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-1e642940-9539-439c-94da-a4cd8d214cf1');
-            failedItemContent = $("#fails-collapse-1e642940-9539-439c-94da-a4cd8d214cf1");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-e845a6f5-4f40-4818-ab42-ef9bf8b62ad3');
-            failedItemContent = $("#fails-collapse-e845a6f5-4f40-4818-ab42-ef9bf8b62ad3");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-a14ef3c7-e7da-4fa5-8434-44abe768640b');
-            failedItemContent = $("#fails-collapse-a14ef3c7-e7da-4fa5-8434-44abe768640b");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-c77e17c4-7d6b-4586-a958-fdbd251abbad');
-            failedItemContent = $("#fails-collapse-c77e17c4-7d6b-4586-a958-fdbd251abbad");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-60fb95d8-1296-4965-b4fb-f94dd5aca405');
-            failedItemContent = $("#fails-collapse-60fb95d8-1296-4965-b4fb-f94dd5aca405");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-7a8f3627-a6cf-466d-9ae1-00f497807a6c');
-            failedItemContent = $("#fails-collapse-7a8f3627-a6cf-466d-9ae1-00f497807a6c");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-b94aa059-3edd-4af2-9c33-1fdfbeaaa109');
-            failedItemContent = $("#fails-collapse-b94aa059-3edd-4af2-9c33-1fdfbeaaa109");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-d6299d8b-ad3b-41bd-885e-b0980a938ef4');
-            failedItemContent = $("#fails-collapse-d6299d8b-ad3b-41bd-885e-b0980a938ef4");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-1c05b0a1-804f-4f61-94b6-57654ef7ffc4');
-            failedItemContent = $("#fails-collapse-1c05b0a1-804f-4f61-94b6-57654ef7ffc4");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-ed2d0f96-9153-4fca-97da-497fc218bd72');
-            failedItemContent = $("#fails-collapse-ed2d0f96-9153-4fca-97da-497fc218bd72");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
-            failedItemHeading = $('#fails-6b7d56ab-58fc-4ae3-892d-ab78682d25bc');
-            failedItemContent = $("#fails-collapse-6b7d56ab-58fc-4ae3-892d-ab78682d25bc");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
         $('#openAllFailed').html("Collapse All Failed Tests");
         break;
     case 2:
-            failedItemHeading = $('#fails-6ef0bf5d-15a3-40f2-b820-220cff0da28a');
-            failedItemContent = $("#fails-collapse-6ef0bf5d-15a3-40f2-b820-220cff0da28a");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-3f7da3d5-832b-42a3-a25d-86893da00439');
-            failedItemContent = $("#fails-collapse-3f7da3d5-832b-42a3-a25d-86893da00439");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-230ebfff-e29b-428d-b065-750dc38990eb');
-            failedItemContent = $("#fails-collapse-230ebfff-e29b-428d-b065-750dc38990eb");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-dccf61d5-b497-4987-9a80-ab075c8df37e');
-            failedItemContent = $("#fails-collapse-dccf61d5-b497-4987-9a80-ab075c8df37e");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-1e642940-9539-439c-94da-a4cd8d214cf1');
-            failedItemContent = $("#fails-collapse-1e642940-9539-439c-94da-a4cd8d214cf1");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-e845a6f5-4f40-4818-ab42-ef9bf8b62ad3');
-            failedItemContent = $("#fails-collapse-e845a6f5-4f40-4818-ab42-ef9bf8b62ad3");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-a14ef3c7-e7da-4fa5-8434-44abe768640b');
-            failedItemContent = $("#fails-collapse-a14ef3c7-e7da-4fa5-8434-44abe768640b");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-c77e17c4-7d6b-4586-a958-fdbd251abbad');
-            failedItemContent = $("#fails-collapse-c77e17c4-7d6b-4586-a958-fdbd251abbad");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-60fb95d8-1296-4965-b4fb-f94dd5aca405');
-            failedItemContent = $("#fails-collapse-60fb95d8-1296-4965-b4fb-f94dd5aca405");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-7a8f3627-a6cf-466d-9ae1-00f497807a6c');
-            failedItemContent = $("#fails-collapse-7a8f3627-a6cf-466d-9ae1-00f497807a6c");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-b94aa059-3edd-4af2-9c33-1fdfbeaaa109');
-            failedItemContent = $("#fails-collapse-b94aa059-3edd-4af2-9c33-1fdfbeaaa109");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-d6299d8b-ad3b-41bd-885e-b0980a938ef4');
-            failedItemContent = $("#fails-collapse-d6299d8b-ad3b-41bd-885e-b0980a938ef4");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-1c05b0a1-804f-4f61-94b6-57654ef7ffc4');
-            failedItemContent = $("#fails-collapse-1c05b0a1-804f-4f61-94b6-57654ef7ffc4");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-ed2d0f96-9153-4fca-97da-497fc218bd72');
-            failedItemContent = $("#fails-collapse-ed2d0f96-9153-4fca-97da-497fc218bd72");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
-            failedItemHeading = $('#fails-6b7d56ab-58fc-4ae3-892d-ab78682d25bc');
-            failedItemContent = $("#fails-collapse-6b7d56ab-58fc-4ae3-892d-ab78682d25bc");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
         $('#openAllFailed').html("Expand All Failed Tests");
         break;
 }
@@ -2420,8 +1870,6 @@ function scrollFunction() {
     document.getElementById("openAllRequests").style.display = "none";
 
 
-    document.getElementById("showOnlyFailures").style.display = "none";
-    document.getElementById("openAllFailed").style.display = "none";
   } else {
     document.getElementById("topOfRequestsScreen").style.display = "none";
     document.getElementById("topOfFailuresScreen").style.display = "none";
@@ -2429,8 +1877,6 @@ function scrollFunction() {
     document.getElementById("openAll").style.display = "block";
     document.getElementById("openAllRequests").style.display = "block";
 
-    document.getElementById("showOnlyFailures").style.display = "block";
-    document.getElementById("openAllFailed").style.display = "block";
   }
 }
 
@@ -2493,10 +1939,6 @@ window.onload = function () {
   document.getElementById('iteration-0').click();
   document.getElementById('iterationSelected').innerHTML = `Iteration ${document.getElementById('iteration-0').innerHTML} selected`
 
-    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
-    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
-    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
-    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
 }
 </script>
 
