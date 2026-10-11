@@ -1,4 +1,4 @@
-named: QA API Regression Pipeline
+name: QA API Regression Pipeline
 on:
   push:
     branches: [ main ]
