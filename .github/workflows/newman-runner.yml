@@ -4,7 +4,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
 permissions:
-  contents: write 
+  contents: write
 jobs:
   test-execution:
     runs-on: ubuntu-latest
@@ -21,11 +21,13 @@ jobs:
           newman run "GoRest API.postman_collection.json" -e "GoRest Env.postman_environment.json" -r htmlextra --reporter-htmlextra-export newman/gorest-report.html || true
           newman run "OpenWeather API.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/weather-report.html || true
           newman run "Simple Books API.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/books-report.html || true
+          echo '<html><body><h1>API Reports</h1><a href="gorest-report.html">GoRest</a><br><a href="weather-report.html">Weather</a><br><a href="books-report.html">Books</a></body></html>' > newman/index.html
+          ls -la newman/
       - uses: actions/upload-artifact@v4
         with:
           name: newman-report
           path: newman/
-      - uses: peaceiris/actions-gh-pages@v3
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./newman
