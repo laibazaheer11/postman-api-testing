@@ -13,14 +13,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: |
-          npm install -g newman
-          npm install -g newman-reporter-htmlextra
+      - run: npm install -g newman newman-reporter-htmlextra
       - run: |
           mkdir -p newman
-          newman run "GoRest API.postman_collection.json" -e "GoRest Env.postman_environment.json" -r htmlextra --reporter-htmlextra-export newman/gorest-report.html || true
-          newman run "OpenWeather API.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/weather-report.html || true
-          newman run "Simple Books API.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/books-report.html || true
+          newman run "collections/gorest-api.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/gorest-report.html || true
+          newman run "collections/openweather-api.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/weather-report.html || true
+          newman run "collections/simple-books-api.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/books-report.html || true
           echo '<html><body><h1>API Reports</h1><a href="gorest-report.html">GoRest</a><br><a href="weather-report.html">Weather</a><br><a href="books-report.html">Books</a></body></html>' > newman/index.html
           ls -la newman/
       - uses: actions/upload-artifact@v4
