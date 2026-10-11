@@ -1,4 +1,4 @@
-name: QA API Regression Pipeline
+named: QA API Regression Pipeline
 on:
   push:
     branches: [ main ]
@@ -18,14 +18,14 @@ jobs:
           mkdir -p newman
           newman run "collections/gorest-api.postman_collection.json" \
             --env-var "token=${{ secrets.GOREST_TOKEN }}" \
-            -r htmlextra --reporter-htmlextra-export newman/gorest-report.html || true
+            -r, cli, htmlextra --reporter-htmlextra-export newman/gorest-report.html || true
           
           newman run "collections/openweather-api.postman_collection.json" \
             --env-var "apiKey=${{ secrets.WEATHER_API_KEY }}" \
-          -r htmlextra --reporter-htmlextra-export newman/weather-report.html || true
+            -r cli, htmlextra --reporter-htmlextra-export newman/weather-report.html || true
           
           newman run "collections/simple-books-api.postman_collection.json" \
-            -r htmlextra --reporter-htmlextra-export newman/books-report.html || true
+            -r cli, htmlextra --reporter-htmlextra-export newman/books-report.html || true
           
           echo '<html><body><h1>API Reports</h1><a href="gorest-report.html">GoRest</a><br><a href="weather-report.html">Weather</a><br><a href="books-report.html">Books</a></body></html>' > newman/index.html
           ls -la newman/
