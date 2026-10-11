@@ -21,7 +21,7 @@ jobs:
             -r, cli, htmlextra --reporter-htmlextra-export newman/gorest-report.html || true
           
           newman run "collections/openweather-api.postman_collection.json" \
-            --env-var "apiKey=${{ secrets.WEATHER_API_KEY }}" \
+            --env-var "api_key=${{ secrets.WEATHER_API_KEY }}" \
             -r cli, htmlextra --reporter-htmlextra-export newman/weather-report.html || true
           
           newman run "collections/simple-books-api.postman_collection.json" \
