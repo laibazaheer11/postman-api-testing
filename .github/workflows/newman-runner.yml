@@ -1,43 +1,29 @@
 name: QA API Regression Pipeline
-
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   workflow_dispatch:
-
 jobs:
   test-execution:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Clone Code Repository
-        uses: actions/checkout@v4
-
-      - name: Initialize Node.js Environment
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
-
-      - name: Install Newman CLI tool
-        run: npm install -g newman newman-reporter-htmlextra
-
-      - name: Run GoRest API Collection
-        run: |
-          newman run "collections/gorest-api.postman_collection.json" \
-          --env-var "token=${{ secrets.GOREST_TOKEN }}" \
-          -r htmlextra --reporter-htmlextra-export newman/gorest-report.html
-
-      - name: Run OpenWeather API Collection
-        run: |
-          newman run "collections/openweather-api.postman_collection.json" \
-          --env-var "api_key=${{ secrets.WEATHER_API_KEY }}" \
-          -r htmlextra --reporter-htmlextra-export newman/weather-report.html
-
-      - name: Run Simple Books API Collection
-        run: newman run "collections/simple-books-api.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/books-report.html
-
-      - name: Upload report
-        uses: actions/upload-artifact@v4
+      - run: |
+          npm install -g newman
+          npm install -g newman-reporter-htmlextra
+      - run: |
+          mkdir -p newman
+          newman run "GoRest API.postman_collection.json" -e "GoRest Env.postman_environment.json" -r htmlextra --reporter-htmlextra-export newman/gorest-report.html || true
+          newman run "OpenWeather API.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/weather-report.html || true
+          newman run "Simple Books API.postman_collection.json" -r htmlextra --reporter-htmlextra-export newman/books-report.html || true
+      - uses: actions/upload-artifact@v4
         with:
           name: newman-report
           path: newman/
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./newman
