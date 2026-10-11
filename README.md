@@ -4,6 +4,7 @@
 🚀 **Live Reports:** https://laibazaheer11.github.io/postman-api-testing/
 
 
+
 [![QA API Regression Pipeline](https://github.com/laibazaheer11/postman-api-testing/actions/workflows/newman-runner.yml/badge.svg)](https://github.com/laibazaheer11/postman-api-testing/actions/workflows/newman-runner.yml)
 
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
