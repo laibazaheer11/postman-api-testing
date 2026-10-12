@@ -12,6 +12,11 @@
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
+### 📊 All Reports
+- GoRest: [gorest-report.html](https://laibazaheer11.github.io/postman-api-testing/gorest-report.html)
+- Weather: [weather-report.html](https://laibazaheer11.github.io/postman-api-testing/weather-report.html)
+- Books: [books-report.html](https://laibazaheer11.github.io/postman-api-testing/books-report.html)
+
 
  This Repository contains my portfolio of automated API test suites. It demonstrates end-to-end integration testing, data chaining between endpoints, and automatic schema validation. 
 
