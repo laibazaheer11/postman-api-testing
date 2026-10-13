@@ -214,9 +214,10 @@
         }
       ],
       "request": {
+        "auth": { "type": "noauth" },
         "method": "POST",
         "header": [{ "key": "Authorization", "value": "Bearer invalid_token_12345_xyz" }],
-        "body": { "mode": "raw", "raw": "{\n  \"name\": \"{{Dummy Auth User\",\n  \"email\":\"dummy_auth_1234@test.com\",\n  \"gender\": \"male\",\n  \"status\": \"active\"\n}", "options": { "raw": { "language": "json" } } },
+        "body": { "mode": "raw", "raw": "{\n  \"name\": \"Dummy Auth User\",\n  \"email\":\"dummy_auth_1234@test.com\",\n  \"gender\": \"male\",\n  \"status\": \"active\"\n}", "options": { "raw": { "language": "json" } } },
         "url": { "raw": "{{base_url}}/users", "host": ["{{base_url}}"], "path": ["users"] }
       },
       "response": []
