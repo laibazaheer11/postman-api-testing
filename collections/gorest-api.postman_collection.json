@@ -216,7 +216,7 @@
       "request": {
         "method": "DELETE",
         "header": [{ "key": "Authorization", "value": "Bearer invalid_token_12345_xyz" }],
-        "url": { "raw": "{{base_url}}/users/8888888", "host": ["{{base_url}}"], "path": ["users", "123"] }
+        "url": { "raw": "{{base_url}}/users/8888888", "host": ["{{base_url}}"], "path": ["users", "8888888"] }
       },
       "response": []
     },
