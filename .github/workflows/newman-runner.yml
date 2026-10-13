@@ -20,11 +20,11 @@ jobs:
         run: mkdir -p newman
 
       - name: Run GoRest
-        run: newman run "collections/gorest-api.postman_collection.json" --collection-var "token=${{ secrets.GOREST_TOKEN }}" -r cli,htmlextra --reporter-htmlextra-export newman/gorest-report.html
+        run: newman run "collections/gorest-api.postman_collection.json" --env-var "token=${{ secrets.GOREST_TOKEN }}" -r cli,htmlextra --reporter-htmlextra-export newman/gorest-report.html
         continue-on-error: true
 
       - name: Run Weather
-        run: newman run "collections/openweather-api.postman_collection.json" --collection-var "api_key=${{ secrets.WEATHER_API_KEY }}" -r cli,htmlextra --reporter-htmlextra-export newman/weather-report.html
+        run: newman run "collections/openweather-api.postman_collection.json" --env-var "api_key=${{ secrets.WEATHER_API_KEY }}" -r cli,htmlextra --reporter-htmlextra-export newman/weather-report.html
         continue-on-error: true
 
       - name: Run Books
