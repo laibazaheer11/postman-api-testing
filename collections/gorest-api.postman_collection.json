@@ -206,7 +206,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"401\", () => {",
+              "pm.test(\"401 status code\", () => {",
               "    pm.response.to.have.status(401);",
               "});"
             ]
@@ -214,9 +214,9 @@
         }
       ],
       "request": {
-        "method": "GET",
+        "method": "DELETE",
         "header": [{ "key": "Authorization", "value": "Bearer invalid_token_12345_xyz" }],
-        "url": { "raw": "{{base_url}}/users/123", "host": ["{{base_url}}"], "path": ["users", "123"] }
+        "url": { "raw": "{{base_url}}/users/8888888", "host": ["{{base_url}}"], "path": ["users", "123"] }
       },
       "response": []
     },
