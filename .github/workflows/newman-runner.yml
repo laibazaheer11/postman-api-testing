@@ -3,8 +3,7 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-permissions:
-  contents: write
+
 jobs:
   test-execution:
     runs-on: ubuntu-latest
@@ -13,27 +12,50 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install -g newman newman-reporter-htmlextra
-      - run: |
-          mkdir -p newman
-          newman run "collections/gorest-api.postman_collection.json" \
-            --env-var "token=${{ secrets.GOREST_TOKEN }}" \
-            -r cli,htmlextra --reporter-htmlextra-export newman/gorest-report.html || true
           
-          newman run "collections/openweather-api.postman_collection.json" \
-            --env-var "api_key=${{ secrets.WEATHER_API_KEY }}" \
-            -r cli,htmlextra --reporter-htmlextra-export newman/weather-report.html || true
-          
-          newman run "collections/simple-books-api.postman_collection.json" \
-            -r cli,htmlextra --reporter-htmlextra-export newman/books-report.html || true
-          
-          echo '<html><body><h1>API Reports</h1><a href="gorest-report.html">GoRest</a><br><a href="weather-report.html">Weather</a><br><a href="books-report.html">Books</a></body></html>' > newman/index.html
-          ls -la newman/
+      - name: Install Newman
+        run: npm install -g newman newman-reporter-htmlextra
+
+      - name: Run Tests
+        run: mkdir -p newman
+
+      - name: Run GoRest
+        run: newman run "collections/gorest-api.postman_collection.json" --collection-var "token=${{ secrets.GOREST_TOKEN }}" -r cli,htmlextra --reporter-htmlextra-export newman/gorest-report.html
+        continue-on-error: true
+
+      - name: Run Weather
+        run: newman run "collections/openweather-api.postman_collection.json" --collection-var "api_key=${{ secrets.WEATHER_API_KEY }}" -r cli,htmlextra --reporter-htmlextra-export newman/weather-report.html
+        continue-on-error: true
+
+      - name: Run Books
+        run: newman run "collections/simple-books-api.postman_collection.json" -r cli,htmlextra --reporter-htmlextra-export newman/books-report.html
+        continue-on-error: true
+
+      - name: Create Index
+        if: always()
+        run: echo '<html><body><h1>API Reports</h1><a href="gorest-report.html">GoRest</a><br><a href="weather-report.html">Weather</a><br><a href="books-report.html">Books</a></body></html>' > newman/index.html
+
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: newman-report
           path: newman/
-      - uses: peaceiris/actions-gh-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        if: always()
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./newman
+          path: newman/
+
+  deploy:
+    needs: test-execution
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
