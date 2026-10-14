@@ -332,6 +332,10 @@
           "script": {
             "type": "text/javascript",
             "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "  pm.response.to.have.status(200);",
+              "});",
+              "",
               "let verifyUpdateData = pm.response.json();",
               "",
               "pm.test(\"Customer name updated correctly\",()=>{",
@@ -398,11 +402,6 @@
         "body": {
           "mode": "raw",
           "raw": "",
-          "options": {
-            "raw": {
-              "language": "text"
-            }
-          }
         },
         "url": {
           "raw": "{{base_url}}/orders/{{order_id}}",
@@ -466,10 +465,33 @@
       "response": []
     }
   ],
-  "variable": [
+     "variable": [
     {
       "key": "base_url",
       "value": "https://simple-books-api.click"
+    },
+    {
+      "key": "client_name",
+      "value": ""
+    },
+    {
+      "key": "client_email",
+      "value": ""
+    },
+    {
+      "key": "access_token",
+      "value": ""
+    },
+    {
+      "key": "book_id",
+      "value": ""
+    },
+    {
+      "key": "order_id",
+      "value": ""
+    },
+    {
+      "key": "updated_name",
+      "value": ""
     }
   ]
-}
