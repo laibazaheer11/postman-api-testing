@@ -1,103 +1,92 @@
 # Postman API Automation Testing Portfolio
 
-
-🚀 **Live Reports:** https://laibazaheer11.github.io/postman-api-testing/
-
-
+**Live Execution Reports:** https://laibazaheer11.github.io/postman-api-testing/
 
 [![QA API Regression Pipeline](https://github.com/laibazaheer11/postman-api-testing/actions/workflows/newman-runner.yml/badge.svg)](https://github.com/laibazaheer11/postman-api-testing/actions/workflows/newman-runner.yml)
-
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
 ![Newman CLI](https://img.shields.io/badge/Newman-000000?style=flat-square&logo=npm&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-
-
- This Repository contains my portfolio of automated API test suites. It demonstrates end-to-end integration testing, data chaining between endpoints, and automatic schema validation. 
-
-To simulate a real-world QA workflow, all tests are automated to run in the cloud using GitHub Actions and the Newman command-line runner whenever changes are made.
 
 ---
 
-## 🛠️ Tools & Technologies Used
-* **Testing Tool:** Postman
-* **Runner Tool:** Newman CLI 
-* **Automation Platform:** GitHub Actions
-* **Assertion Scripting:** JavaScript + Chai
+## Overview
+
+Final year IT student portfolio for SQA Intern role. Focused on API automation, not manual.
+
+Built 3 independent Postman collections with end-to-end chaining, auth handling, and negative coverage. All tests run on GitHub Actions using Newman with HTML reports published to GitHub Pages.
+
+| Metric | Count |
+| :--- | :--- |
+| Total Collections | 3 |
+| Total Requests | 26 |
+| Total Assertions | 49 |
+| Negative Cases | 8 |
+| Failed Tests | 0 |
+| Avg Response Time | <500ms |
 
 ---
 
-## 📂 Project Structure & Test Cases Breakdown
+## Tools Used
 
-All test suites are cleanly organized inside the `/collections` folder:
+- Postman for test design and chaining
+- Newman + htmlextra for CLI execution and reporting
+- GitHub Actions for CI, Secrets for token security, Pages for live reports
+- JavaScript / Chai for assertions
 
-### 1. GoRest API Chaining Suite (`/collections/gorest-api.postman_collection.json`)
-* **Goal:** Tests a complete user data lifecycle (Create, Read, Update, Delete) and passes data from one request to the next.
-* **Testing Logic:** To prevent data errors caused by creating duplicate users, I used a pre-request script to generate a brand new username and email automatically before every run:
-```javascript
-var username = "user" + Math.floor(Math.random() * 10000);
-var useremail = "test" + Date.now() + "@example.com";
-pm.collectionVariables.set("user_email", useremail);
-pm.collectionVariables.set("user_name", username);
+## Test Suites Breakdown
+
+All collections are in `/collections`.
+
+| Collection | What I Tested | Requests | Assertions | Key Logic I Implemented |
+| :--- | :--- | :--- | :--- | :--- |
+| **GoRest CRUD & Chaining** | Full user lifecycle: Create -> Get -> Update -> Delete | 8 | 15 | Dynamic email generation to avoid 422 duplicates, chained user_id, cleanup after delete |
+| **OpenWeather Chaining** | Geocode to Weather to Forecast to Air Pollution | 6 | 13 | Chained lat/lon from city name, validated lat/lon ranges, looped forecast array for temp/humidity |
+| **Simple Books E2E Order Flow** | Status -> Auth -> Find Book -> Order -> Verify -> Delete | 12 | 21 | Generated random client, extracted bearer token, used .find() for available book, verified deletion |
+
+### Negative Coverage (8 cases total)
+
+- GoRest: 422 Duplicate Email, 401 Invalid Token, 404 Invalid User ID
+- OpenWeather: 200 Empty array for invalid city, 401 Invalid API Key
+- Simple Books: 401 Invalid Token, 400 Invalid Book ID, 400 Missing customer name
+
+---
+
+## CI/CD Pipeline
+
+Built with GitHub Actions: `QA API Regression Pipeline`
+
+Workflow file: `.github/workflows/newman-runner.yml`
+
+- Triggers on push to main and manual dispatch
+- Uses Node 22, installs Newman globally
+- Runs 3 collections with separate secrets:
+    - `GOREST_TOKEN` for GoRest
+    - `WEATHER_API_KEY` for OpenWeather
+- `continue-on-error: true` so one suite failure doesn't hide others
+- Exports 3 HTML reports to `/newman`
+- Deploys to GitHub Pages + uploads artifact
+
+Live Reports: https://laibazaheer11.github.io/postman-api-testing/
+- `gorest-report.html` - 8 req / 15 assertions
+- `weather-report.html` - 6 req / 13 assertions
+- `books-report.html` - 12 req / 21 assertions
+All runs show 0 failed - see live dashboard for current response times.
+
+**Security:** No tokens in code. All handled via GitHub Secrets and `--env-var`.
+
+## How to Run Locally
+
+```bash
+npm install -g newman newman-reporter-htmlextra
+newman run collections/gorest-api.postman_collection.json --env-var "token=YOUR_TOKEN" -r cli,htmlextra --reporter-htmlextra-export newman/gorest-report.html
+newman run collections/openweather-api.postman_collection.json --env-var "api_key=YOUR_KEY" -r cli,htmlextra --reporter-htmlextra-export newman/weather-report.html
+newman run collections/simple-books-api.postman_collection.json -r cli,htmlextra --reporter-htmlextra-export newman/books-report.html
 ```
-* **Test Flow Steps:**
-  1. `POST /users` -> Creates a user, checks that the response is `201 Created`, extracts the unique user ID from the response body, and saves it.
-  2. `GET /users/{id}` -> Fetches the user using the saved ID, and checks that the returned name and email match our saved variables exactly.
-  3. `PUT /users/{id}` -> Updates the user's gender and status, ensuring the server response time stays under 3000ms.
-  4. `DELETE /users/{id}` -> Deletes the user record and verifies that the server returns a successful `204 No Content` status code.
-
-### 2. OpenWeather Map API Suite (`/collections/openweather-api.postman_collection.json`)
-* **Goal:** Tests data types, object properties, value ranges, and lists of data items.
-* **Testing Logic:** Verifies that geographical coordinates returned by the API are actual numbers and fall inside valid real-world ranges (Latitude between -90 and 90, Longitude between -180 and 180):
-```javascript
-pm.test("latitude and longitude are valid numbers in range", () => {
-    pm.expect(res.lat).to.be.a("number");
-    pm.expect(res.lat).to.be.at.least(-90).and.at.most(90);
-});
-```
-* **Test Flow Steps:**
-  1. `GET Geocode direct` -> Converts a text city name into latitude and longitude numbers, checking that the returned array is not empty.
-  2. `GET Current Weather` -> Uses the saved coordinates to fetch the weather, confirming mandatory fields like `main`, `weather`, and `name` exist, and checking that the humidity percentage is between 0 and 100.
-  3. `GET 5-Day Forecast` -> Uses a `forEach` loop to look inside the weather forecast array, making sure every single timestamp entry contains valid temperature and date numbers.
-  4. `GET Air Pollution` -> Validates the Air Quality Index (AQI) value to ensure it falls strictly between categories 1 and 5.
-
-### 3. Simple Books API Suite (`/collections/simple-books-api.postman_collection.json`)
-* **Goal:** Tests token-based bearer authentication, order matching logic, and final variable cleanup.
-* **Testing Logic:** Uses a JavaScript array function (`.find()`) to dynamically search through the list of books to find one that is marked as available (`available === true`) instead of using a hardcoded book number:
-```javascript
-let availableBook = data.find(book => book.available === true);
-pm.expect(availableBook).to.not.be.undefined;
-pm.collectionVariables.set("book_id", availableBook.id);
-```
-* **Test Flow Steps:**
-  1. `GET /status` -> Verifies the API server status returns an "OK" message.
-  2. `POST /api-clients` -> Simulates creating an account to generate a secure API access token, verifying it is a valid text string.
-  3. `GET /books` -> Checks the book list and saves the ID of an available book.
-  4. `POST /orders` -> Places a book order using the generated bearer access token for authorization.
-  5. `GET /orders/{id}` -> Fetches the placed order to confirm the details match our order request.
-  6. `PATCH /orders/{id}` -> Updates the customer's name on the order and checks for a `204` successful status code.
-  7. `DELETE /orders/{id}` -> Deletes the book order.
-  8. `Verify Deletion` -> Tries to fetch the deleted order again to confirm the API returns a proper `404 Not Found` error.
-  9. `Variable Cleanup` -> Automatically unsets and clears out all temporary variables from Postman memory so the next test run starts fresh.
 
 ---
 
-## 📋 Summary of Automated Test Types Covered
+## Execution Proof
 
-* **Status Code Validations:** Asserting HTTP response codes like `200 OK`, `201 Created`, `204 No Content`, and `404 Not Found`.
-* **Response Time Audits:** Monitoring API latency to check that responses come back within acceptable limits (e.g., below 3000ms).
-* **Data Type & Schema Validations:** Confirming that field values match their expected formats (e.g., ID must be a `number`, email text must contain an `@` symbol).
-* **Dynamic Chaining:** Capturing values from an API response body and passing them directly into the parameters of the next API request.
-* **Array & Loop Verifications:** Iterating through large JSON response arrays using loops to check that every item contains valid mandatory data properties.
-* **Authentication Security Checks:** Validating endpoints that require token headers, and ensuring deleted or unauthenticated access results in proper error handling.
+![Actions](https://raw.githubusercontent.com/laibazaheer11/postman-api-testing/main/screenshots/actions.png)
 
----
-
-## ⚙️ How the Automated CI/CD Execution Works
-
-The automated testing process is handled step-by-step by GitHub Actions inside the configuration file `.github/workflows/newman-runner.yml`:
-
-1. **Start System:** GitHub spins up a clean, temporary virtual Linux computer whenever code changes are saved.
-2. **Setup Dependencies:** It downloads Node.js software tools and installs the command-line interface tool (`newman`) onto the runner.
-3. **Secret Security Management:** The workflow securely pulls private authentication tokens from the repository's encrypted settings, keeping them safe from public view.
-4. **Execution Run:** It sequentially triggers Newman commands to execute all three collections against the live test servers, outputting clear pass/fail results directly inside the GitHub Actions tab.
+Live dashboard: https://laibazaheer11.github.io/postman-api-testing/
