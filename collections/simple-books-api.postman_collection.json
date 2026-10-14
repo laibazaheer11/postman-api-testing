@@ -320,7 +320,6 @@
               "});",
               "pm.collectionVariables.unset(\"order_id\");",
               "pm.collectionVariables.unset(\"book_id\");",
-              "pm.collectionVariables.unset(\"access_token\");",
               "pm.collectionVariables.unset(\"client_name\");",
               "pm.collectionVariables.unset(\"client_email\");",
               "pm.collectionVariables.unset(\"updated_name\");"
@@ -405,7 +404,7 @@
         "header": [{ "key": "Content-Type", "value": "application/json" }],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"bookId\": 999999,\n  \"customerName\": \"{{client_name}}\"\n}",
+          "raw": "{\n  \"bookId\": 999999,\n  \"customerName\": \"Test\"\n}",
           "options": { "raw": { "language": "json" } }
         },
         "url": {
@@ -443,7 +442,7 @@
         "header": [{ "key": "Content-Type", "value": "application/json" }],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"bookId\": {{book_id}}\n}",
+          "raw": "{\n  \"bookId\": 1\n}",
           "options": { "raw": { "language": "json" } }
         },
         "url": {
