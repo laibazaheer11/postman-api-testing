@@ -1,8 +1,8 @@
 {
   "info": {
     "_postman_id": "0399f36b-c3c5-4df1-a378-1b27c8d345c2",
-    "name": "Simple Books API - E2E Ordee Flow",
-    "schema": "https://getpostman.com",
+    "name": "Simple Books API - E2E Order Flow",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "53233168"
   },
   "item": [
@@ -17,7 +17,6 @@
               "pm.test(\"Status code is 200\", function () {",
               "  pm.response.to.have.status(200);",
               "});",
-              "",
               "let statusData = pm.response.json();",
               "pm.test(\"API status is OK\", () =>{",
               "  pm.expect(statusData.status).to.eql(\"OK\");",
@@ -27,19 +26,13 @@
         }
       ],
       "request": {
-        "auth": {
-          "type": "noauth"
-        },
+        "auth": { "type": "noauth" },
         "method": "GET",
         "header": [],
         "url": {
           "raw": "{{base_url}}/status",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "status"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["status"]
         }
       },
       "response": []
@@ -67,14 +60,11 @@
               "pm.test(\"Status code is 201\", function () {",
               "  pm.response.to.have.status(201);",
               "});",
-              "",
               "let clientData = pm.response.json();",
-              "",
               "pm.test(\"Response has accessToken\",()=>{",
               "  pm.expect(clientData).to.have.property(\"accessToken\");",
               "  pm.expect(clientData.accessToken).to.be.a(\"string\").and.not.empty;",
               "});",
-              "",
               "pm.collectionVariables.set(\"access_token\", clientData.accessToken);"
             ]
           }
@@ -86,20 +76,12 @@
         "body": {
           "mode": "raw",
           "raw": "{\n\"clientName\":\"{{client_name}}\",\n  \"clientEmail\":\"{{client_email}}\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
+          "options": { "raw": { "language": "json" } }
         },
         "url": {
           "raw": "{{base_url}}/api-clients",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "api-clients"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["api-clients"]
         }
       },
       "response": []
@@ -115,17 +97,14 @@
               "pm.test(\"Status code is 200\", function () {",
               "  pm.response.to.have.status(200);",
               "});",
-              "",
               "let booksData = pm.response.json();",
               "pm.test(\"Response is a non-empty array\", function () {",
               "  pm.expect(booksData).to.be.an(\"array\").and.not.empty; ",
               "});",
-              "",
               "let availableBook = booksData.find( book => book.available === true);",
               "pm.test(\"At least one available book exists\",()=>{",
               "  pm.expect(availableBook).to.not.be.undefined;",
               "});",
-              "",
               "pm.collectionVariables.set(\"book_id\", availableBook.id);"
             ]
           }
@@ -136,21 +115,11 @@
         "header": [],
         "url": {
           "raw": "{{base_url}}/books?type=fiction&limit=10",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "books"
-          ],
+          "host": ["{{base_url}}"],
+          "path": ["books"],
           "query": [
-            {
-              "key": "type",
-              "value": "fiction"
-            },
-            {
-              "key": "limit",
-              "value": "10"
-            }
+            { "key": "type", "value": "fiction" },
+            { "key": "limit", "value": "10" }
           ]
         }
       },
@@ -167,13 +136,10 @@
               "pm.test(\"Status code is 201\", function () {",
               "  pm.response.to.have.status(201);",
               "});",
-              "",
               "let orderData = pm.response.json();",
-              "",
               "pm.test(\"Response has order Id\",()=>{",
               "  pm.expect(orderData).to.have.property(\"orderId\");",
               "});",
-              "",
               "pm.collectionVariables.set(\"order_id\", orderData.orderId);"
             ]
           }
@@ -182,38 +148,19 @@
       "request": {
         "auth": {
           "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "{{access_token}}",
-              "type": "string"
-            }
-          ]
+          "bearer": [{ "key": "token", "value": "{{access_token}}", "type": "string" }]
         },
         "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
         "body": {
           "mode": "raw",
           "raw": "{\n  \"bookId\": {{book_id}},\n  \"customerName\": \"{{client_name}}\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
+          "options": { "raw": { "language": "json" } }
         },
         "url": {
           "raw": "{{base_url}}/orders",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "orders"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["orders"]
         }
       },
       "response": []
@@ -229,9 +176,7 @@
               "pm.test(\"Status code is 200\", function () {",
               "  pm.response.to.have.status(200);",
               "});",
-              "",
               "let getOrderData = pm.response.json();",
-              "",
               "pm.test(\"Order Id matches saved order id\", () =>{",
               "  pm.expect(getOrderData.id).to.eql(pm.collectionVariables.get(\"order_id\"));",
               "});"
@@ -242,25 +187,14 @@
       "request": {
         "auth": {
           "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "{{access_token}}",
-              "type": "string"
-            }
-          ]
+          "bearer": [{ "key": "token", "value": "{{access_token}}", "type": "string" }]
         },
         "method": "GET",
         "header": [],
         "url": {
           "raw": "{{base_url}}/orders/{{order_id}}",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "orders",
-            "{{order_id}}"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["orders", "{{order_id}}"]
         }
       },
       "response": []
@@ -292,34 +226,19 @@
       "request": {
         "auth": {
           "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "{{access_token}}",
-              "type": "string"
-            }
-          ]
+          "bearer": [{ "key": "token", "value": "{{access_token}}", "type": "string" }]
         },
         "method": "PATCH",
         "header": [],
         "body": {
           "mode": "raw",
           "raw": "{\n  \"customerName\": \"{{updated_name}}\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
+          "options": { "raw": { "language": "json" } }
         },
         "url": {
           "raw": "{{base_url}}/orders/{{order_id}}",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "orders",
-            "{{order_id}}"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["orders", "{{order_id}}"]
         }
       },
       "response": []
@@ -335,9 +254,7 @@
               "pm.test(\"Status code is 200\", function () {",
               "  pm.response.to.have.status(200);",
               "});",
-              "",
               "let verifyUpdateData = pm.response.json();",
-              "",
               "pm.test(\"Customer name updated correctly\",()=>{",
               "  pm.expect(verifyUpdateData.customerName).to.eql(pm.collectionVariables.get(\"updated_name\"));",
               "});"
@@ -348,30 +265,19 @@
       "request": {
         "auth": {
           "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "{{access_token}}",
-              "type": "string"
-            }
-          ]
+          "bearer": [{ "key": "token", "value": "{{access_token}}", "type": "string" }]
         },
         "method": "GET",
         "header": [],
         "url": {
           "raw": "{{base_url}}/orders/{{order_id}}",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "orders",
-            "{{order_id}}"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["orders", "{{order_id}}"]
         }
       },
       "response": []
     },
-       {
+    {
       "name": "Delete Order",
       "event": [
         {
@@ -389,35 +295,20 @@
       "request": {
         "auth": {
           "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "{{access_token}}",
-              "type": "string"
-            }
-          ]
+          "bearer": [{ "key": "token", "value": "{{access_token}}", "type": "string" }]
         },
         "method": "DELETE",
         "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "",
-        },
         "url": {
           "raw": "{{base_url}}/orders/{{order_id}}",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "orders",
-            "{{order_id}}"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["orders", "{{order_id}}"]
         }
       },
       "response": []
     },
     {
-      "name": "Verify Deletion",
+      "name": "Verify Deletion - 404",
       "event": [
         {
           "listen": "test",
@@ -427,7 +318,6 @@
               "pm.test(\"Deleted Order Returns 404\", function () {",
               "  pm.response.to.have.status(404);",
               "});",
-              "",
               "pm.collectionVariables.unset(\"order_id\");",
               "pm.collectionVariables.unset(\"book_id\");",
               "pm.collectionVariables.unset(\"access_token\");",
@@ -441,31 +331,131 @@
       "request": {
         "auth": {
           "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "{{access_token}}",
-              "type": "string"
-            }
-          ]
+          "bearer": [{ "key": "token", "value": "{{access_token}}", "type": "string" }]
         },
         "method": "GET",
         "header": [],
         "url": {
           "raw": "{{base_url}}/orders/{{order_id}}",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "orders",
-            "{{order_id}}"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["orders", "{{order_id}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[NEG] Invalid Token - 401",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 401 for invalid token\", function () {",
+              "  pm.response.to.have.status(401);",
+              "});",
+              "pm.test(\"Error message for auth\", function(){",
+              "  pm.expect(pm.response.text()).to.include(\"Invalid\");",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": { "type": "noauth" },
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer invalid_token_12345" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookId\": 1,\n  \"customerName\": \"Fake User\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{base_url}}/orders",
+          "host": ["{{base_url}}"],
+          "path": ["orders"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[NEG] Invalid Book ID - 404",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 404 for invalid book\", function () {",
+              "  pm.response.to.have.status(404);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [{ "key": "token", "value": "{{access_token}}", "type": "string" }]
+        },
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookId\": 999999,\n  \"customerName\": \"{{client_name}}\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{base_url}}/orders",
+          "host": ["{{base_url}}"],
+          "path": ["orders"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[NEG] Missing customerName - 400",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 400 for missing field\", function () {",
+              "  pm.response.to.have.status(400);",
+              "});",
+              "pm.test(\"Error mentions customerName\", function(){",
+              "  pm.expect(pm.response.text().toLowerCase()).to.include(\"customername\");",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [{ "key": "token", "value": "{{access_token}}", "type": "string" }]
+        },
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookId\": {{book_id}}\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{base_url}}/orders",
+          "host": ["{{base_url}}"],
+          "path": ["orders"]
         }
       },
       "response": []
     }
   ],
-     "variable": [
+    "variable": [
     {
       "key": "base_url",
       "value": "https://simple-books-api.click"
