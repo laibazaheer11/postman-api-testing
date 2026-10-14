@@ -13,9 +13,11 @@
 
 ## Overview
 
-Final year IT student portfolio for SQA Intern role. Focused on API automation, not manual.
+This project demonstrates API testing and automation using Postman, Newman CLI, and GitHub Actions CI/CD.
 
-Built 3 independent Postman collections with end-to-end chaining, auth handling, and negative coverage. All tests run on GitHub Actions using Newman with HTML reports published to GitHub Pages.
+Built as a final year IT portfolio for SQA Intern / Entry-Level QA roles, focusing on automated API regression with end-to-end chaining, auth handling, and negative coverage.
+
+All Collections run on GitHub Actions using Newman with HTML reports published to GitHub Pages.
 
 | Metric | Count |
 | :--- | :--- |
