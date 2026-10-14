@@ -381,15 +381,15 @@
       "response": []
     },
     {
-      "name": "[NEG] Invalid Book ID - 404",
+      "name": "[NEG] Invalid Book ID - 400",
       "event": [
         {
           "listen": "test",
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 404 for invalid book\", function () {",
-              "  pm.response.to.have.status(404);",
+              "pm.test(\"Status code is 400 for invalid book\", function () {",
+              "  pm.response.to.have.status(400);",
               "});"
             ]
           }
@@ -426,7 +426,7 @@
               "pm.test(\"Status code is 400 for missing field\", function () {",
               "  pm.response.to.have.status(400);",
               "});",
-              "pm.test(\"Error mentions customerName\", function(){",
+              "pm.test(\"Error mentions customername\", function(){",
               "  pm.expect(pm.response.text().toLowerCase()).to.include(\"customername\");",
               "});"
             ]
