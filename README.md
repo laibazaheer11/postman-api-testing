@@ -72,6 +72,7 @@ Live Reports: https://laibazaheer11.github.io/postman-api-testing/
 - `gorest-report.html` - 8 req / 15 assertions
 - `weather-report.html` - 6 req / 13 assertions
 - `books-report.html` - 12 req / 21 assertions
+
 All runs show 0 failed - see live dashboard for current response times.
 
 **Security:** No tokens in code. All handled via GitHub Secrets and `--env-var`.
