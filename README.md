@@ -2,7 +2,9 @@
 
 **Live Execution Reports:** https://laibazaheer11.github.io/postman-api-testing/
 
+
 [![QA API Regression Pipeline](https://github.com/laibazaheer11/postman-api-testing/actions/workflows/newman-runner.yml/badge.svg)](https://github.com/laibazaheer11/postman-api-testing/actions/workflows/newman-runner.yml)
+
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
 ![Newman CLI](https://img.shields.io/badge/Newman-000000?style=flat-square&logo=npm&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
@@ -82,11 +84,3 @@ newman run collections/gorest-api.postman_collection.json --env-var "token=YOUR_
 newman run collections/openweather-api.postman_collection.json --env-var "api_key=YOUR_KEY" -r cli,htmlextra --reporter-htmlextra-export newman/weather-report.html
 newman run collections/simple-books-api.postman_collection.json -r cli,htmlextra --reporter-htmlextra-export newman/books-report.html
 ```
-
----
-
-## Execution Proof
-
-![Actions](https://raw.githubusercontent.com/laibazaheer11/postman-api-testing/main/screenshots/actions.png)
-
-Live dashboard: https://laibazaheer11.github.io/postman-api-testing/
