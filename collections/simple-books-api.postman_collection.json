@@ -427,7 +427,7 @@
               "  pm.response.to.have.status(400);",
               "});",
               "pm.test(\"Error mentions customername\", function(){",
-              "  pm.expect(pm.response.text().toLowerCase()).to.include(\"customername\");",
+              "  pm.expect(pm.response.text().toLowerCase()).to.include(\"customer name\");",
               "});"
             ]
           }
