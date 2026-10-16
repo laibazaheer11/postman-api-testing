@@ -10,10 +10,13 @@
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 
 <details>
-<summary>📸 View Execution Proof - Pipeline #75 Passed</summary>
+<summary>📸 View Execution Proof</summary>
 
-![Actions Success](actions-success.png)
-![GoRest Dashboard](gorest-dashboard.png)
+### GitHub Actions Pipeline - Build #75 Passed
+![Actions Success](.github/screenshots/actions-success.png)
+
+### GoRest Dashboard - API Execution
+![GoRest Dashboard](.github/screenshots/gorest-dashboard.png)
 
 </details>
 
