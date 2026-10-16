@@ -9,6 +9,14 @@
 ![Newman CLI](https://img.shields.io/badge/Newman-000000?style=flat-square&logo=npm&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 
+<details>
+<summary>📸 View Execution Proof - Pipeline #75 Passed</summary>
+
+![Actions Success](actions-success.png)
+![GoRest Dashboard](gorest-dashboard.png)
+
+</details>
+
 ---
 
 ## Overview
